@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\submarine.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\submarineeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\submarine\\definitions.submarine.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
