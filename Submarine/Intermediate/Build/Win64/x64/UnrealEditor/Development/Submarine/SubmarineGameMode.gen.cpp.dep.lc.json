@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\submarinegamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\submarineeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\submarine\\definitions.submarine.h",
+            "e:\\unrealgame\\submarineue\\submarine\\source\\submarine\\submarinegamemode.h",
+            "e:\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "e:\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "e:\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "e:\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "e:\\unrealgame\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\submarinegamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

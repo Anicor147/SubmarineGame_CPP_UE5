@@ -11,6 +11,7 @@
     <None Include="..\..\Source\SubmarineEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -76,6 +77,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Submarine\TP_WeaponComponent.h">
       <Filter>Source\Submarine</Filter>
+    </ClInclude>
+    <Filter Include="Source\Submarine\Private">
+      <UniqueIdentifier>{4748C48E-C6F2-3F49-8867-2C90B86A6857}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Submarine\Private\NPCCharacter.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Submarine\Private\WaterMecanic.h">
+      <Filter>Source\Submarine\Private</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

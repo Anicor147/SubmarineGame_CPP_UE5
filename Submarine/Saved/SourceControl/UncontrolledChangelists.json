@@ -1,0 +1,36 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Castle_Guard_02.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character_Animation/Idle.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character_Animation/Rib_Hit.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/FirstPerson/Blueprints/BP_NPC.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character_Animation/ABP_NPC.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character_Animation/AM_Hit.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/WE/KJWS5VLGYXGNFY9UD9672I.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Castle_Guard_02_Anim.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Castle_Guard_02_PhysicsAsset.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Castle_Guard_02_Skeleton.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Guard_03.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Guard_03__diffuse.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Guard_03__normal.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Assets/Character/Guard_03__specular.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Niagara/Water.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/XE/OOBEMUZVERC7IXHGIUQ4W9.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/BP/BP_Water.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/Niagara/NewNiagaraSystem.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/FPWeapon/Materials/BaseMaterial.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/FirstPersonArms/Character/Materials/M_Mannequin.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/LevelPrototyping/Materials/M_Solid.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/LevelPrototyping/Materials/MI_Solid_Blue.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/36/HOQSMTJSNM3DOA8F2XVPW7.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/CN/7IKN414D5V2GV8V25I21LJ.uasset",
+				"E:/UnrealGame/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/P5/0CB8T24F77K9TL4LA3S4KP.uasset"
+			]
+		}
+	]
+}

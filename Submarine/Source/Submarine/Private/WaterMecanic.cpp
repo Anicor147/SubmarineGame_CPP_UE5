@@ -1,0 +1,44 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "WaterMecanic.h"
+
+// Sets default values
+AWaterMecanic::AWaterMecanic()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	Root = CreateDefaultSubobject<USceneComponent>("Root");
+	RootComponent = Root;
+	
+	WaterComponent = CreateDefaultSubobject<UNiagaraComponent>("Water");
+	WaterComponent->SetupAttachment(Root);
+}
+
+// Called when the game starts or when spawned
+void AWaterMecanic::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
+void AWaterMecanic::WaterLevel()
+{
+	FVector CurrentLocation = GetActorLocation();
+	CurrentLocation.Z = 0.5f * GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("CurrentLocation.Z: %f"), CurrentLocation.Z);
+	if (CurrentLocation.Z > 160.f)
+	{
+		CurrentLocation.Z = 160.f;
+	}
+	SetActorLocation(CurrentLocation);
+}
+
+// Called every frame
+void AWaterMecanic::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	WaterLevel();
+}
+
