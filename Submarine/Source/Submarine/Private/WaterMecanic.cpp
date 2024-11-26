@@ -37,6 +37,6 @@ void AWaterMecanic::WaterLevel()
 void AWaterMecanic::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	// WaterLevel();
+	 WaterLevel();
 }
 

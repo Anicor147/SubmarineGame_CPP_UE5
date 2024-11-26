@@ -16,7 +16,5 @@ class UPlayerWidget : public UUserWidget
 
 public :
 	UFUNCTION(BlueprintImplementableEvent)
-	void SetPromptF(bool visible);
-	void SetPromptE(bool visible);
-	void SetPromptG(bool visible);
+	void SetPromptF(bool Visible);
 };

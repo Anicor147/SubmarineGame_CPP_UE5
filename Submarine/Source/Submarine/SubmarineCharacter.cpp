@@ -9,9 +9,11 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "PlayerWidget.h"
+#include "Blueprint/UserWidget.h"
 #include "Components/BoxComponent.h"
 #include "Engine/LocalPlayer.h"
-
+#include "Private/PlayerWidget.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -39,6 +41,10 @@ ASubmarineCharacter::ASubmarineCharacter()
 
 	InvisibleBody = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("InvisibleBody"));
 	InvisibleBody -> SetupAttachment(FirstPersonCameraComponent);
+
+	InspectOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("InspectOrigin"));
+	InspectOrigin->SetupAttachment(FirstPersonCameraComponent);
+	InspectOrigin->SetRelativeLocation(FVector(40.f, 0.f, 0.f)); // Position the camera	
 }
 
 void ASubmarineCharacter::BeginPlay()
@@ -48,6 +54,39 @@ void ASubmarineCharacter::BeginPlay()
 
 	InvisibleBody -> SetVisibility(false);
 
+	auto UserWidget = CreateWidget<UUserWidget>(GetWorld(), PlayerWidgetClass);
+	PlayerWidget = Cast<UPlayerWidget>(UserWidget);
+	PlayerWidget->AddToViewport();	
+
+}
+
+void ASubmarineCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (!IsInspecting)
+	{
+		FHitResult Hit;
+		FVector Start = FirstPersonCameraComponent->GetComponentLocation();
+		FVector End = Start + FirstPersonCameraComponent->GetForwardVector() * 5000.f;
+		FCollisionObjectQueryParams ObjectQueryParams;
+		ObjectQueryParams.AddObjectTypesToQuery(ECC_WorldDynamic);
+
+		FCollisionQueryParams QueryParams;
+		QueryParams.AddIgnoredActor(this);
+
+		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
+			Hit.GetActor()))
+		{
+			CurrentInspectActor = Hit.GetActor();
+			PlayerWidget->SetPromptF(true);
+		}
+		else
+		{
+			CurrentInspectActor = nullptr;
+			PlayerWidget->SetPromptF(false);
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -66,6 +105,14 @@ void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ASubmarineCharacter::Look);
+
+
+		EnhancedInputComponent->BindAction(EnterInspectAction, ETriggerEvent::Triggered, this,
+												   &ASubmarineCharacter::EnterInspect);
+		EnhancedInputComponent->BindAction(ExitInspectAction, ETriggerEvent::Triggered, this,
+										   &ASubmarineCharacter::ExitInspect);
+		EnhancedInputComponent->BindAction(RotateInspectAction, ETriggerEvent::Triggered, this,
+										   &ASubmarineCharacter::RotateInspect);
 	}
 	else
 	{
@@ -97,9 +144,52 @@ void ASubmarineCharacter::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
-		if (LookAxisVector.Y < 0.0f )
-		{
-			LookAxisVector.Y = 10.f;
-		}
 	}
+}
+
+void ASubmarineCharacter::EnterInspect()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Entering Inspect"));
+
+	if (!IsInspecting && IsValid(CurrentInspectActor))
+	{
+		IsInspecting = true;
+		PlayerWidget->SetPromptF(false);
+		InspectOrigin->SetRelativeRotation(FRotator::ZeroRotator);
+		InitialInspectTransform = CurrentInspectActor->GetActorTransform();
+		CurrentInspectActor->AttachToComponent(InspectOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+
+		auto PlayerController = Cast<APlayerController>(GetController());
+		auto InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
+			PlayerController->GetLocalPlayer());
+		InputSubsystem->RemoveMappingContext(DefaultMappingContext);
+		InputSubsystem->AddMappingContext(InspectMappingContext, 0);
+	}
+	
+}
+
+void ASubmarineCharacter::ExitInspect()
+{
+	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Exit Inspect"));
+
+	if (IsInspecting)
+	{
+		IsInspecting = false;
+		CurrentInspectActor->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		CurrentInspectActor->SetActorTransform(InitialInspectTransform);
+		CurrentInspectActor = nullptr;
+
+
+		auto PlayerController = Cast<APlayerController>(GetController());
+		auto InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
+			PlayerController->GetLocalPlayer());
+		InputSubsystem->RemoveMappingContext(InspectMappingContext);
+		InputSubsystem->AddMappingContext(DefaultMappingContext, 0);
+	}	
+}
+
+void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Entering Inspect"));
 }
