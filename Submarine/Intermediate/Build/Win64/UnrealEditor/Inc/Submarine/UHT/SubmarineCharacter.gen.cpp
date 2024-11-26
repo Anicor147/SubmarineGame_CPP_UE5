@@ -13,7 +13,6 @@ void EmptyLinkFunctionForGeneratedCodeSubmarineCharacter() {}
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ASubmarineCharacter();
 SUBMARINE_API UClass* Z_Construct_UClass_ASubmarineCharacter_NoRegister();
@@ -114,7 +113,7 @@ struct Z_Construct_UClass_ASubmarineCharacter_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InvisibleBody = { "InvisibleBody", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, InvisibleBody), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvisibleBody_MetaData), NewProp_InvisibleBody_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InvisibleBody = { "InvisibleBody", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, InvisibleBody), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvisibleBody_MetaData), NewProp_InvisibleBody_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_Mesh1P = { "Mesh1P", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh1P_MetaData), NewProp_Mesh1P_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_FirstPersonCameraComponent = { "FirstPersonCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData), NewProp_FirstPersonCameraComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
@@ -169,10 +168,10 @@ ASubmarineCharacter::~ASubmarineCharacter() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 2710289871U) },
+		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 1541334579U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_2648294158(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_401859278(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

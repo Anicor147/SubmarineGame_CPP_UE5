@@ -22,7 +22,7 @@ class ASubmarineCharacter : public ACharacter
 	GENERATED_BODY()
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* InvisibleBody;
+	USkeletalMeshComponent* InvisibleBody;
 	
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))

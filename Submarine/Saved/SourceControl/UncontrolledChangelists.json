@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/Unreal/SubmarineUE/Submarine/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"E:/Unreal/SubmarineUE/Submarine/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/QI/Z0GHI6MY0GD72UE136L8T8.uasset"
+			]
+		}
+	]
+}

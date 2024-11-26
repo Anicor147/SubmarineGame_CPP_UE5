@@ -37,7 +37,7 @@ ASubmarineCharacter::ASubmarineCharacter()
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
-	InvisibleBody = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("InvisibleBody"));
+	InvisibleBody = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("InvisibleBody"));
 	InvisibleBody -> SetupAttachment(FirstPersonCameraComponent);
 }
 
@@ -45,6 +45,9 @@ void ASubmarineCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	InvisibleBody -> SetVisibility(false);
+
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
