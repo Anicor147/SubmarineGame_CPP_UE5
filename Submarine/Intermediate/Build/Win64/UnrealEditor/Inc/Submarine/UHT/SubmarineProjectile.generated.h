@@ -17,11 +17,11 @@ struct FHitResult;
 #endif
 #define SUBMARINE_SubmarineProjectile_generated_h
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASubmarineProjectile(); \
 	friend struct Z_Construct_UClass_ASubmarineProjectile_Statics; \
@@ -32,7 +32,7 @@ public: \
 
 
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASubmarineProjectile(ASubmarineProjectile&&); \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~ASubmarineProjectile();
 
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_12_PROLOG
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_SubmarineProjectile_h_12_PROLOG
+#define FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_SubmarineProjectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SUBMARINE_API UClass* StaticClass<class ASubmarineProjectile>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h
+#define CURRENT_FILE_ID FID_Submarine_Source_Submarine_SubmarineProjectile_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

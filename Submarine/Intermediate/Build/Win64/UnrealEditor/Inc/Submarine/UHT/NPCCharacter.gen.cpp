@@ -89,14 +89,14 @@ ANPCCharacter::~ANPCCharacter() {}
 // End Class ANPCCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 3870342615U) },
+		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 3386147265U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_NPCCharacter_h_2742532682(TEXT("/Script/Submarine"),
-	Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NPCCharacter_h_2466587191(TEXT("/Script/Submarine"),
+	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NPCCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -202,14 +202,14 @@ ASubmarineProjectile::~ASubmarineProjectile() {}
 // End Class ASubmarineProjectile
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_Statics
+struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineProjectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASubmarineProjectile, ASubmarineProjectile::StaticClass, TEXT("ASubmarineProjectile"), &Z_Registration_Info_UClass_ASubmarineProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineProjectile), 1482791458U) },
+		{ Z_Construct_UClass_ASubmarineProjectile, ASubmarineProjectile::StaticClass, TEXT("ASubmarineProjectile"), &Z_Registration_Info_UClass_ASubmarineProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineProjectile), 3373229822U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_2303358024(TEXT("/Script/Submarine"),
-	Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarineProjectile_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineProjectile_h_3329034405(TEXT("/Script/Submarine"),
+	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineProjectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"E:\\UnrealGame\\SubmarineUE\\Submarine\\Source\\Submarine\\Submarine.Build.cs",
-		"E:\\UnrealGame\\SubmarineUE\\Submarine\\Source\\Submarine.Target.cs",
-		"E:\\UnrealGame\\SubmarineUE\\Submarine\\Source\\SubmarineEditor.Target.cs"
+		"E:\\Unreal\\SubmarineUE\\Submarine\\Source\\Submarine\\Submarine.Build.cs",
+		"E:\\Unreal\\SubmarineUE\\Submarine\\Source\\Submarine.Target.cs",
+		"E:\\Unreal\\SubmarineUE\\Submarine\\Source\\SubmarineEditor.Target.cs"
 	],
-	"EngineVersion": "5.4.4"
+	"EngineVersion": "5.5.0"
 }

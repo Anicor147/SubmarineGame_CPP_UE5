@@ -9,6 +9,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Components/BoxComponent.h"
 #include "Engine/LocalPlayer.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -36,6 +37,8 @@ ASubmarineCharacter::ASubmarineCharacter()
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
+	InvisibleBody = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("InvisibleBody"));
+	InvisibleBody -> SetupAttachment(FirstPersonCameraComponent);
 }
 
 void ASubmarineCharacter::BeginPlay()
@@ -91,5 +94,9 @@ void ASubmarineCharacter::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+		if (LookAxisVector.Y < 0.0f )
+		{
+			LookAxisVector.Y = 10.f;
+		}
 	}
 }

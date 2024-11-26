@@ -98,14 +98,14 @@ AWaterMecanic::~AWaterMecanic() {}
 // End Class AWaterMecanic
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics
+struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWaterMecanic, AWaterMecanic::StaticClass, TEXT("AWaterMecanic"), &Z_Registration_Info_UClass_AWaterMecanic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterMecanic), 2174326359U) },
+		{ Z_Construct_UClass_AWaterMecanic, AWaterMecanic::StaticClass, TEXT("AWaterMecanic"), &Z_Registration_Info_UClass_AWaterMecanic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterMecanic), 1265841559U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_WaterMecanic_h_884303922(TEXT("/Script/Submarine"),
-	Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_1946038(TEXT("/Script/Submarine"),
+	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

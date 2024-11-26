@@ -1,11 +1,13 @@
-"E:\UnrealGame\SubmarineUE\Submarine\Source\Submarine\SubmarineGameMode.cpp"
-/FI"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Definitions.Submarine.h"
-/Yu"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineGameMode.cpp.obj"
-/sourceDependencies "E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineGameMode.cpp.dep.json"
-@"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Submarine.Shared.rsp"
+"E:\Unreal\SubmarineUE\Submarine\Source\Submarine\SubmarineGameMode.cpp"
+/FI"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h"
+/FI"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Definitions.Submarine.h"
+/Yu"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h"
+/Fp"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h.pch"
+/Fo"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineGameMode.cpp.obj"
+/experimental:log "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineGameMode.cpp.sarif"
+/sourceDependencies "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineGameMode.cpp.dep.json"
+@"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Submarine.Shared.rsp"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi

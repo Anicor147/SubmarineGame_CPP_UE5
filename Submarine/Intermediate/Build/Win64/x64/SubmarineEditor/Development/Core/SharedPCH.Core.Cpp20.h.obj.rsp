@@ -1,18 +1,21 @@
-"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.cpp"
+"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.cpp"
 /I "."
 /I "Runtime\Core\Public"
 /I "Runtime\Core\Internal"
 /I "Runtime\TraceLog\Public"
 /external:W0
-/external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\INCLUDE"
+/external:I "ThirdParty\GuidelinesSupportLibrary\GSL-1144\include"
+/external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/Yc"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h"
-/Fp"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.pch"
-/Fo"E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.obj"
-/sourceDependencies "E:\UnrealGame\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.dep.json"
+/Yc"SharedPCH.Core.Cpp20.h"
+/Fp"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.pch"
+/Fo"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.obj"
+/experimental:log "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.sarif"
+/sourceDependencies "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\Core\SharedPCH.Core.Cpp20.h.dep.json"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi

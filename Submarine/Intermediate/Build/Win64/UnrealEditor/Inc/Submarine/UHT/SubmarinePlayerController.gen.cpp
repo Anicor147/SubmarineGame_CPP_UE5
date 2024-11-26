@@ -99,14 +99,14 @@ ASubmarinePlayerController::~ASubmarinePlayerController() {}
 // End Class ASubmarinePlayerController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics
+struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASubmarinePlayerController, ASubmarinePlayerController::StaticClass, TEXT("ASubmarinePlayerController"), &Z_Registration_Info_UClass_ASubmarinePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarinePlayerController), 3948338155U) },
+		{ Z_Construct_UClass_ASubmarinePlayerController, ASubmarinePlayerController::StaticClass, TEXT("ASubmarinePlayerController"), &Z_Registration_Info_UClass_ASubmarinePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarinePlayerController), 4074183752U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_506720232(TEXT("/Script/Submarine"),
-	Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarinePlayerController_h_1321914080(TEXT("/Script/Submarine"),
+	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarinePlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

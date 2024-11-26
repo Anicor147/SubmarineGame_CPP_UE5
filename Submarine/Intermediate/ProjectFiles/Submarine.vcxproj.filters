@@ -39,59 +39,83 @@
     <ClCompile Include="..\..\Source\Submarine\Submarine.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\Submarine.h">
+    <ClCompile Include="..\..\Source\Submarine\Submarine.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\SubmarineCharacter.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\SubmarineCharacter.h">
+    <ClCompile Include="..\..\Source\Submarine\SubmarineCharacter.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\SubmarineGameMode.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\SubmarineGameMode.h">
+    <ClCompile Include="..\..\Source\Submarine\SubmarineGameMode.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\SubmarinePlayerController.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\SubmarinePlayerController.h">
+    <ClCompile Include="..\..\Source\Submarine\SubmarinePlayerController.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\SubmarineProjectile.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\SubmarineProjectile.h">
+    <ClCompile Include="..\..\Source\Submarine\SubmarineProjectile.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\TP_PickUpComponent.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\TP_PickUpComponent.h">
+    <ClCompile Include="..\..\Source\Submarine\TP_PickUpComponent.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\TP_WeaponComponent.cpp">
       <Filter>Source\Submarine</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\TP_WeaponComponent.h">
+    <ClCompile Include="..\..\Source\Submarine\TP_WeaponComponent.h">
       <Filter>Source\Submarine</Filter>
-    </ClInclude>
+    </ClCompile>
     <Filter Include="Source\Submarine\Private">
       <UniqueIdentifier>{4748C48E-C6F2-3F49-8867-2C90B86A6857}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Submarine\Private\Battery.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Battery.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Generator.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Generator.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Lever.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Lever.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\Private\NPCCharacter.h">
+    <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.h">
       <Filter>Source\Submarine\Private</Filter>
-    </ClInclude>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\PlayerWidget.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\PlayerWidget.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Submarine\Private\WaterMecanic.h">
+    <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.h">
       <Filter>Source\Submarine\Private</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>

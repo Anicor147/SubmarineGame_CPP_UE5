@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_SubmarinePlayerController_generated_h
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_SubmarinePlayerController_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASubmarinePlayerController(); \
 	friend struct Z_Construct_UClass_ASubmarinePlayerController_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ASubmarinePlayerController)
 
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_SubmarinePlayerController_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASubmarinePlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~ASubmarinePlayerController();
 
 
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_14_PROLOG
-#define FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_17_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_SubmarinePlayerController_h_14_PROLOG
+#define FID_Submarine_Source_Submarine_SubmarinePlayerController_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_17_INCLASS_NO_PURE_DECLS \
-	FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_SubmarinePlayerController_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_SubmarinePlayerController_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SUBMARINE_API UClass* StaticClass<class ASubmarinePlayerController>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UnrealGame_SubmarineUE_Submarine_Source_Submarine_SubmarinePlayerController_h
+#define CURRENT_FILE_ID FID_Submarine_Source_Submarine_SubmarinePlayerController_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
