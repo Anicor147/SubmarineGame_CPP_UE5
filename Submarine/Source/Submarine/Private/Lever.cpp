@@ -2,6 +2,7 @@
 
 
 #include "Lever.h"
+#include "LeverCondition.h"
 
 // Sets default values
 ALever::ALever()
@@ -35,12 +36,16 @@ void ALever::Tick(float DeltaTime)
 
 void ALever::ActivateLever()
 {
-	cylinder->SetRelativeRotation(FRotator(0, 0, -40));
+	if (!doOnce)
+	{
+		cylinder->SetRelativeRotation(FRotator(0, 0, -40));
+		condition->CheckSequence(value);
+		doOnce = true;
+	}
 }
 
-void ALever::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp,
-                       bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
-                       const FHitResult& Hit)
+void ALever::ResetLever()
 {
-	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+	doOnce = false;
+	cylinder->SetRelativeRotation(FRotator(0, 0, 30));
 }

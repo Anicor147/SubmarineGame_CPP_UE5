@@ -9,6 +9,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "LeverCondition.h"
 #include "PlayerWidget.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/BoxComponent.h"
@@ -78,7 +79,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
-			if (Hit.GetActor()->ActorHasTag("Lever"))
+			if (Hit.GetActor()->ActorHasTag("Lever") || Hit.GetActor()->ActorHasTag("Button"))
 			{
 				InteractActor = Hit.GetActor();
 				PlayerWidget->SetPromptE(true);
@@ -210,6 +211,15 @@ void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 
 void ASubmarineCharacter::InteractWithObject()
 {
-	ALever* Lever = Cast<ALever>(InteractActor);
-	Lever->ActivateLever();
+	if (InteractActor->ActorHasTag("Button"))
+	{
+		ALeverCondition* button = Cast<ALeverCondition>(InteractActor);
+		button->ButtonPressed();
+	}
+
+	if (InteractActor->ActorHasTag("Lever"))
+	{
+		ALever* Lever = Cast<ALever>(InteractActor);
+		Lever->ActivateLever();
+	}
 }

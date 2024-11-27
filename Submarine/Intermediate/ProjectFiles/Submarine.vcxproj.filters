@@ -99,6 +99,12 @@
     <ClCompile Include="..\..\Source\Submarine\Private\Lever.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\LeverCondition.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\LeverCondition.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>

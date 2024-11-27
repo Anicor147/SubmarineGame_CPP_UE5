@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Lever.generated.h"
 
+class ALeverCondition;
+
 UCLASS()
 class ALever : public AActor
 {
@@ -13,7 +15,7 @@ class ALever : public AActor
 
 private:
 	float LeverAngle = 40;
-	
+
 public:
 	// Sets default values for this actor's properties
 	ALever();
@@ -26,6 +28,9 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* ball;
 
+	UPROPERTY(EditAnywhere, category = "Lever Condition")
+	ALeverCondition* condition;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -34,8 +39,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void ActivateLever();
+	virtual void ResetLever();
 private:
-	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp,
-	                       bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
-	                       const FHitResult& Hit) override;
+	UPROPERTY(EditAnywhere)
+	int value;
+	bool doOnce;
 };
