@@ -32,3 +32,15 @@ void ALever::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+
+void ALever::ActivateLever()
+{
+	cylinder->SetRelativeRotation(FRotator(0, 0, -40));
+}
+
+void ALever::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp,
+                       bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse,
+                       const FHitResult& Hit)
+{
+	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+}

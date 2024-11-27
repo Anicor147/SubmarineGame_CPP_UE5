@@ -23,7 +23,7 @@ class ASubmarineCharacter : public ACharacter
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* InvisibleBody;
-	
+
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* Mesh1P;
@@ -49,25 +49,28 @@ class ASubmarineCharacter : public ACharacter
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USceneComponent* InspectOrigin;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputMappingContext* DefaultMappingContext;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputMappingContext* InspectMappingContext;	
+	UInputMappingContext* InspectMappingContext;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* InteractAction;
+
 public:
 	ASubmarineCharacter();
 
 protected:
 	virtual void BeginPlay();
 	virtual void Tick(float DeltaTime) override;
+
 public:
-		
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* RotateInspectAction;
 
@@ -77,12 +80,11 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-	
+
 	void EnterInspect();
 	void ExitInspect();
 	void RotateInspect(const FInputActionValue& Value);
-
-
+	void InteractWithObject();
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
@@ -93,6 +95,7 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
 private:
 	class UPlayerWidget* PlayerWidget;
 
@@ -102,6 +105,6 @@ private:
 
 	bool IsInspecting;
 	AActor* CurrentInspectActor;
-	FTransform InitialInspectTransform;	
+	AActor* InteractActor;
+	FTransform InitialInspectTransform;
 };
-

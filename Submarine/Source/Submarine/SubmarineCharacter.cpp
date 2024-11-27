@@ -14,6 +14,7 @@
 #include "Components/BoxComponent.h"
 #include "Engine/LocalPlayer.h"
 #include "Private/PlayerWidget.h"
+#include "Private/Lever.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -23,7 +24,7 @@ ASubmarineCharacter::ASubmarineCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
-		
+
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
@@ -40,7 +41,7 @@ ASubmarineCharacter::ASubmarineCharacter()
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
 	InvisibleBody = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("InvisibleBody"));
-	InvisibleBody -> SetupAttachment(FirstPersonCameraComponent);
+	InvisibleBody->SetupAttachment(FirstPersonCameraComponent);
 
 	InspectOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("InspectOrigin"));
 	InspectOrigin->SetupAttachment(FirstPersonCameraComponent);
@@ -52,12 +53,11 @@ void ASubmarineCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
-	InvisibleBody -> SetVisibility(false);
+	InvisibleBody->SetVisibility(false);
 
 	auto UserWidget = CreateWidget<UUserWidget>(GetWorld(), PlayerWidgetClass);
 	PlayerWidget = Cast<UPlayerWidget>(UserWidget);
-	PlayerWidget->AddToViewport();	
-
+	PlayerWidget->AddToViewport();
 }
 
 void ASubmarineCharacter::Tick(float DeltaTime)
@@ -78,13 +78,23 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
-			CurrentInspectActor = Hit.GetActor();
-			PlayerWidget->SetPromptF(true);
+			if (Hit.GetActor()->ActorHasTag("Lever"))
+			{
+				InteractActor = Hit.GetActor();
+				PlayerWidget->SetPromptE(true);
+			}
+
+			if (Hit.GetActor()->ActorHasTag("Inspect"))
+			{
+				CurrentInspectActor = Hit.GetActor();
+				PlayerWidget->SetPromptF(true);
+			}
 		}
 		else
 		{
 			CurrentInspectActor = nullptr;
 			PlayerWidget->SetPromptF(false);
+			PlayerWidget->SetPromptE(false);
 		}
 	}
 }
@@ -92,7 +102,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 //////////////////////////////////////////////////////////////////////////// Input
 
 void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{	
+{
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
@@ -108,15 +118,20 @@ void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 
 		EnhancedInputComponent->BindAction(EnterInspectAction, ETriggerEvent::Triggered, this,
-												   &ASubmarineCharacter::EnterInspect);
+		                                   &ASubmarineCharacter::EnterInspect);
 		EnhancedInputComponent->BindAction(ExitInspectAction, ETriggerEvent::Triggered, this,
-										   &ASubmarineCharacter::ExitInspect);
+		                                   &ASubmarineCharacter::ExitInspect);
 		EnhancedInputComponent->BindAction(RotateInspectAction, ETriggerEvent::Triggered, this,
-										   &ASubmarineCharacter::RotateInspect);
+		                                   &ASubmarineCharacter::RotateInspect);
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this,
+		                                   &ASubmarineCharacter::InteractWithObject);
 	}
 	else
 	{
-		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+		UE_LOG(LogTemplateCharacter, Error,
+		       TEXT(
+			       "'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."
+		       ), *GetNameSafe(this));
 	}
 }
 
@@ -165,12 +180,10 @@ void ASubmarineCharacter::EnterInspect()
 		InputSubsystem->RemoveMappingContext(DefaultMappingContext);
 		InputSubsystem->AddMappingContext(InspectMappingContext, 0);
 	}
-	
 }
 
 void ASubmarineCharacter::ExitInspect()
 {
-	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Exit Inspect"));
 
 	if (IsInspecting)
@@ -186,10 +199,17 @@ void ASubmarineCharacter::ExitInspect()
 			PlayerController->GetLocalPlayer());
 		InputSubsystem->RemoveMappingContext(InspectMappingContext);
 		InputSubsystem->AddMappingContext(DefaultMappingContext, 0);
-	}	
+	}
 }
+
 
 void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Entering Inspect"));
+}
+
+void ASubmarineCharacter::InteractWithObject()
+{
+	ALever* Lever = Cast<ALever>(InteractActor);
+	Lever->ActivateLever();
 }
