@@ -17,6 +17,7 @@
 #include "Engine/LocalPlayer.h"
 #include "Private/PlayerWidget.h"
 #include "Private/Lever.h"
+#include "Private/Interaction.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -63,7 +64,6 @@ void ASubmarineCharacter::BeginPlay()
 
 	auto UserPauseWidget = CreateWidget<UUserWidget>(GetWorld(), PauseWidgetClass);
 	PauseWidget = Cast<UPauseWidget>(UserPauseWidget);
-	
 }
 
 void ASubmarineCharacter::Tick(float DeltaTime)
@@ -81,6 +81,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		FCollisionQueryParams QueryParams;
 		QueryParams.AddIgnoredActor(this);
 
+
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
@@ -94,6 +95,15 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 			{
 				CurrentInspectActor = Hit.GetActor();
 				PlayerWidget->SetPromptF(true);
+			}
+
+			if (Hit.GetActor()->Implements<UInteraction>())
+			{
+				if (IInteraction* InteractionActor = Cast<IInteraction>(Hit.GetActor()))
+				{
+					InteractionActor->Interact(Hit);
+					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("As Interface"));
+				}
 			}
 		}
 		else
@@ -133,7 +143,7 @@ void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		                                   &ASubmarineCharacter::InteractWithObject);
 
 		EnhancedInputComponent->BindAction(PauseAction, ETriggerEvent::Triggered, this,
-		                                   &ASubmarineCharacter::PauseGameAction );
+		                                   &ASubmarineCharacter::PauseGameAction);
 	}
 	else
 	{

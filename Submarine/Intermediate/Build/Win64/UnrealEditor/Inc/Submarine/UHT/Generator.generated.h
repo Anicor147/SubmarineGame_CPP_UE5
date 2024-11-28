@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_Generator_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_Generator_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_Generator_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGenerator(); \
 	friend struct Z_Construct_UClass_AGenerator_Statics; \
 public: \
 	DECLARE_CLASS(AGenerator, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Submarine"), NO_API) \
-	DECLARE_SERIALIZER(AGenerator)
+	DECLARE_SERIALIZER(AGenerator) \
+	virtual UObject* _getUObject() const override { return const_cast<AGenerator*>(this); }
 
 
-#define FID_Submarine_Source_Submarine_Private_Generator_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_Generator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AGenerator(AGenerator&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~AGenerator();
 
 
-#define FID_Submarine_Source_Submarine_Private_Generator_h_10_PROLOG
-#define FID_Submarine_Source_Submarine_Private_Generator_h_13_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_Generator_h_12_PROLOG
+#define FID_Submarine_Source_Submarine_Private_Generator_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_Generator_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_Generator_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_Generator_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_Generator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

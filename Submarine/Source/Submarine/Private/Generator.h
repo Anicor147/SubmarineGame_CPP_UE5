@@ -4,12 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Detach.h"
+#include "Interaction.h"
 #include "NiagaraComponent.h"
 #include "GameFramework/Actor.h"
 #include "Generator.generated.h"
 
 UCLASS()
-class AGenerator : public AActor
+class AGenerator : public AActor, public IInteraction
 {
 	GENERATED_BODY()
 
@@ -21,6 +22,18 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Cube;
 	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Panel;
+	UPROPERTY(VisibleDefaultsOnly)
+	USceneComponent* Screws;
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Screw1;
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Screw2;
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Screw3;
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Screw4;
+	UPROPERTY(VisibleAnywhere)
 	UNiagaraComponent* LightComponent;
 
 protected:
@@ -30,4 +43,5 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual void Interact(FHitResult HitComponent) override;
 };

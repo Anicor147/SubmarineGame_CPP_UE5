@@ -88,7 +88,9 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
             "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\lever.h",
-            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\lever.generated.h"
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\lever.generated.h",
+            "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\interaction.h",
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\interaction.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

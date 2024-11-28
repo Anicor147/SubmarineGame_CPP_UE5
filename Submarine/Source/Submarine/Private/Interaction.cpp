@@ -4,3 +4,6 @@
 #include "Interaction.h"
 
 // Add default functionality here for any IInteraction functions that are not pure virtual.
+void IInteraction::Interact(FHitResult HitComponent)
+{
+}

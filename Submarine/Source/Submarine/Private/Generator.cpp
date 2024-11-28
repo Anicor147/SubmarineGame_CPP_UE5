@@ -16,6 +16,26 @@ AGenerator::AGenerator()
 	Cube = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
 	Cube->SetupAttachment(Root);
 
+	Panel = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Panel"));
+	Panel->SetupAttachment(Root);
+
+	Screws = CreateDefaultSubobject<USceneComponent>(TEXT("Screws"));
+	Screws ->SetupAttachment(Root);
+
+	Screw1 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Screw1"));
+	Screw1->SetupAttachment(Screws);
+
+	Screw2 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Screw2"));
+	Screw2->SetupAttachment(Screws);
+
+	Screw3 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Screw3"));
+	Screw3->SetupAttachment(Screws);
+
+	Screw4 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Screw4"));
+	Screw4->SetupAttachment(Screws);
+
+
+
 	LightComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("LightComponent"));
 	LightComponent->SetupAttachment(Root);
 }
@@ -30,4 +50,14 @@ void AGenerator::BeginPlay()
 void AGenerator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void AGenerator::Interact(FHitResult HitComponent)
+{
+	IInteraction::Interact(HitComponent);
+
+	if (HitComponent.GetComponent()->ComponentHasTag("Screw"))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("It has Screw"));
+	}
 }
