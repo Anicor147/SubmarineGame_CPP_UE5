@@ -39,6 +39,8 @@
 /NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
 "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\SubmarineEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h.obj"
 "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Module.Submarine.cpp.obj"
+"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\SubmarineCharacter.cpp.obj"
+"E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\PauseWidget.cpp.obj"
 "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\WaterMecanic.cpp.obj"
 "E:\Unreal\SubmarineUE\Submarine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Submarine\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"

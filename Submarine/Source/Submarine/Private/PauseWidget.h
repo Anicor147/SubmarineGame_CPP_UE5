@@ -15,6 +15,5 @@ class UPauseWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintImplementableEvent)
-	void PauseGame();
+	virtual void PauseGame();
 };

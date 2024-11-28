@@ -244,5 +244,8 @@ void ASubmarineCharacter::InteractWithObject()
 
 void ASubmarineCharacter::PauseGameAction()
 {
-	PauseWidget->PauseGame();
+	if (PauseWidget)
+	{
+		PauseWidget->PauseGame();
+	}
 }

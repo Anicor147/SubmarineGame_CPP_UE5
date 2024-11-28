@@ -25,10 +25,11 @@ void AWaterMecanic::BeginPlay()
 	Super::BeginPlay();
 }
 
-void AWaterMecanic::WaterLevel()
+void AWaterMecanic::WaterLevel(float DeltaTime)
 {
 	FVector CurrentLocation = GetActorLocation();
-	CurrentLocation.Z = waterSpeed * GetWorld()->GetTimeSeconds();
+	// CurrentLocation.Z = waterSpeed * GetWorld()->GetTimeSeconds();
+	CurrentLocation.Z += waterSpeed * DeltaTime;
 	if (CurrentLocation.Z > 155.f)
 	{
 		CurrentLocation.Z = 155.f;
@@ -40,6 +41,6 @@ void AWaterMecanic::WaterLevel()
 void AWaterMecanic::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	 WaterLevel();
+	 WaterLevel(DeltaTime);
 }
 

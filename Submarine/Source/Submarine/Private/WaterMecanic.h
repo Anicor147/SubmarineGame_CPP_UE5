@@ -36,7 +36,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void WaterLevel();
+	virtual void WaterLevel(float DeltaTime);
 	
 public:
 	// Called every frame

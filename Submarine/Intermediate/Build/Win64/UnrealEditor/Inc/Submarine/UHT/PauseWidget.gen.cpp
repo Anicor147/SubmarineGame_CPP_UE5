@@ -16,34 +16,6 @@ UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
 
-// Begin Class UPauseWidget Function PauseGame
-static const FName NAME_UPauseWidget_PauseGame = FName(TEXT("PauseGame"));
-void UPauseWidget::PauseGame()
-{
-	UFunction* Func = FindFunctionChecked(NAME_UPauseWidget_PauseGame);
-	ProcessEvent(Func,NULL);
-}
-struct Z_Construct_UFunction_UPauseWidget_PauseGame_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Private/PauseWidget.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPauseWidget_PauseGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPauseWidget, nullptr, "PauseGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPauseWidget_PauseGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPauseWidget_PauseGame_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UPauseWidget_PauseGame()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPauseWidget_PauseGame_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-// End Class UPauseWidget Function PauseGame
-
 // Begin Class UPauseWidget
 void UPauseWidget::StaticRegisterNativesUPauseWidget()
 {
@@ -65,10 +37,6 @@ struct Z_Construct_UClass_UPauseWidget_Statics
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
-	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPauseWidget_PauseGame, "PauseGame" }, // 1366709441
-	};
-	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPauseWidget>::IsAbstract,
 	};
@@ -84,11 +52,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPauseWidget_Statics::C
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	FuncInfo,
+	nullptr,
 	nullptr,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	UE_ARRAY_COUNT(FuncInfo),
+	0,
 	0,
 	0,
 	0x00A010A0u,
@@ -115,10 +83,10 @@ UPauseWidget::~UPauseWidget() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PauseWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPauseWidget, UPauseWidget::StaticClass, TEXT("UPauseWidget"), &Z_Registration_Info_UClass_UPauseWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseWidget), 3050696725U) },
+		{ Z_Construct_UClass_UPauseWidget, UPauseWidget::StaticClass, TEXT("UPauseWidget"), &Z_Registration_Info_UClass_UPauseWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPauseWidget), 3863114542U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PauseWidget_h_382500141(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PauseWidget_h_694147199(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PauseWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PauseWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
