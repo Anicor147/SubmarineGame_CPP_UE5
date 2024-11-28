@@ -87,10 +87,22 @@
     <ClCompile Include="..\..\Source\Submarine\Private\Battery.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Detach.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Detach.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Generator.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Generator.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Interaction.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Interaction.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Lever.cpp">
@@ -109,6 +121,12 @@
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\PauseWidget.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\PauseWidget.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\PlayerWidget.cpp">

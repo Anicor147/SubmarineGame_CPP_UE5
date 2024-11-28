@@ -10,6 +10,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "LeverCondition.h"
+#include "PauseWidget.h"
 #include "PlayerWidget.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/BoxComponent.h"
@@ -59,6 +60,10 @@ void ASubmarineCharacter::BeginPlay()
 	auto UserWidget = CreateWidget<UUserWidget>(GetWorld(), PlayerWidgetClass);
 	PlayerWidget = Cast<UPlayerWidget>(UserWidget);
 	PlayerWidget->AddToViewport();
+
+	auto UserPauseWidget = CreateWidget<UUserWidget>(GetWorld(), PauseWidgetClass);
+	PauseWidget = Cast<UPauseWidget>(UserPauseWidget);
+	
 }
 
 void ASubmarineCharacter::Tick(float DeltaTime)
@@ -126,6 +131,9 @@ void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		                                   &ASubmarineCharacter::RotateInspect);
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this,
 		                                   &ASubmarineCharacter::InteractWithObject);
+
+		EnhancedInputComponent->BindAction(PauseAction, ETriggerEvent::Triggered, this,
+		                                   &ASubmarineCharacter::PauseGameAction );
 	}
 	else
 	{
@@ -222,4 +230,9 @@ void ASubmarineCharacter::InteractWithObject()
 		ALever* Lever = Cast<ALever>(InteractActor);
 		Lever->ActivateLever();
 	}
+}
+
+void ASubmarineCharacter::PauseGameAction()
+{
+	PauseWidget->PauseGame();
 }

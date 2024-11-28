@@ -21,13 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeSubmarine_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x8B8EA95A,
-				0x72D98D1A,
+				0xCA5F9498,
+				0xB23F5ACE,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Submarine.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Submarine.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Submarine(Z_Construct_UPackage__Script_Submarine, TEXT("/Script/Submarine"), Z_Registration_Info_UPackage__Script_Submarine, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x8B8EA95A, 0x72D98D1A));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Submarine(Z_Construct_UPackage__Script_Submarine, TEXT("/Script/Submarine"), Z_Registration_Info_UPackage__Script_Submarine, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCA5F9498, 0xB23F5ACE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

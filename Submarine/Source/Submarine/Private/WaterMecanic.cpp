@@ -8,7 +8,7 @@ AWaterMecanic::AWaterMecanic()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	waterSpeed = 0.5f;
 	Root = CreateDefaultSubobject<USceneComponent>("Root");
 	RootComponent = Root;
 	
@@ -25,7 +25,7 @@ void AWaterMecanic::BeginPlay()
 void AWaterMecanic::WaterLevel()
 {
 	FVector CurrentLocation = GetActorLocation();
-	CurrentLocation.Z = 0.5f * GetWorld()->GetTimeSeconds();
+	CurrentLocation.Z = waterSpeed * GetWorld()->GetTimeSeconds();
 	if (CurrentLocation.Z > 160.f)
 	{
 		CurrentLocation.Z = 160.f;

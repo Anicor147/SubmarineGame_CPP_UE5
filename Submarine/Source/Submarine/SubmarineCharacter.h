@@ -59,6 +59,8 @@ class ASubmarineCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* InteractAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* PauseAction;
 public:
 	ASubmarineCharacter();
 
@@ -85,6 +87,7 @@ protected:
 	void ExitInspect();
 	void RotateInspect(const FInputActionValue& Value);
 	void InteractWithObject();
+	void PauseGameAction();
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
@@ -98,10 +101,15 @@ public:
 
 private:
 	class UPlayerWidget* PlayerWidget;
+	class UPauseWidget* PauseWidget;
+	
 
+	
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> PlayerWidgetClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> PauseWidgetClass;
 
 	bool IsInspecting;
 	AActor* CurrentInspectActor;

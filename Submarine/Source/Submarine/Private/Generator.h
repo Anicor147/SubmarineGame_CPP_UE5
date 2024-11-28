@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Detach.h"
 #include "NiagaraComponent.h"
 #include "GameFramework/Actor.h"
 #include "Generator.generated.h"
