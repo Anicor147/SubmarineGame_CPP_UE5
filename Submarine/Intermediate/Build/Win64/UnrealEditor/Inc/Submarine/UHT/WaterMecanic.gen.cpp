@@ -12,7 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeWaterMecanic() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_AWaterMecanic();
 SUBMARINE_API UClass* Z_Construct_UClass_AWaterMecanic_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
@@ -39,7 +39,7 @@ struct Z_Construct_UClass_AWaterMecanic_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/WaterMecanic.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WaterComponent_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Plane_MetaData[] = {
 		{ "Category", "WaterMecanic" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/WaterMecanic.h" },
@@ -50,7 +50,7 @@ struct Z_Construct_UClass_AWaterMecanic_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_WaterComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Plane;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_waterSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -60,11 +60,11 @@ struct Z_Construct_UClass_AWaterMecanic_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterMecanic_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterMecanic, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterMecanic_Statics::NewProp_WaterComponent = { "WaterComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterMecanic, WaterComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterComponent_MetaData), NewProp_WaterComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterMecanic_Statics::NewProp_Plane = { "Plane", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterMecanic, Plane), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Plane_MetaData), NewProp_Plane_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaterMecanic_Statics::NewProp_waterSpeed = { "waterSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterMecanic, waterSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_waterSpeed_MetaData), NewProp_waterSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWaterMecanic_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterMecanic_Statics::NewProp_Root,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterMecanic_Statics::NewProp_WaterComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterMecanic_Statics::NewProp_Plane,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterMecanic_Statics::NewProp_waterSpeed,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWaterMecanic_Statics::PropPointers) < 2048);
@@ -108,10 +108,10 @@ AWaterMecanic::~AWaterMecanic() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWaterMecanic, AWaterMecanic::StaticClass, TEXT("AWaterMecanic"), &Z_Registration_Info_UClass_AWaterMecanic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterMecanic), 3966414256U) },
+		{ Z_Construct_UClass_AWaterMecanic, AWaterMecanic::StaticClass, TEXT("AWaterMecanic"), &Z_Registration_Info_UClass_AWaterMecanic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterMecanic), 1894827583U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_3245741249(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_484857974(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterMecanic_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

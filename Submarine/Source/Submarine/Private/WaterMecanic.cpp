@@ -11,9 +11,12 @@ AWaterMecanic::AWaterMecanic()
 	waterSpeed = 0.5f;
 	Root = CreateDefaultSubobject<USceneComponent>("Root");
 	RootComponent = Root;
+
+	Plane = CreateDefaultSubobject<UStaticMeshComponent>("Plane");
+	Plane->SetupAttachment(Root);
 	
-	WaterComponent = CreateDefaultSubobject<UNiagaraComponent>("Water");
-	WaterComponent->SetupAttachment(Root);
+	// WaterComponent = CreateDefaultSubobject<UNiagaraComponent>("Water");
+	// WaterComponent->SetupAttachment(Root);
 }
 
 // Called when the game starts or when spawned
@@ -26,9 +29,9 @@ void AWaterMecanic::WaterLevel()
 {
 	FVector CurrentLocation = GetActorLocation();
 	CurrentLocation.Z = waterSpeed * GetWorld()->GetTimeSeconds();
-	if (CurrentLocation.Z > 160.f)
+	if (CurrentLocation.Z > 155.f)
 	{
-		CurrentLocation.Z = 160.f;
+		CurrentLocation.Z = 155.f;
 	}
 	SetActorLocation(CurrentLocation);
 }

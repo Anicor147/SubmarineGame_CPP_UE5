@@ -20,9 +20,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 
-	
 	UPROPERTY(VisibleAnywhere)
-	UNiagaraComponent* WaterComponent;
+	UStaticMeshComponent* Plane;
+	
+	// UPROPERTY(VisibleAnywhere)
+	// UNiagaraComponent* WaterComponent;
 
 private:
 	 float Timer;
