@@ -59,11 +59,27 @@ void ASubmarineCharacter::BeginPlay()
 	InvisibleBody->SetVisibility(false);
 
 	auto UserWidget = CreateWidget<UUserWidget>(GetWorld(), PlayerWidgetClass);
-	PlayerWidget = Cast<UPlayerWidget>(UserWidget);
-	PlayerWidget->AddToViewport();
 
-	auto UserPauseWidget = CreateWidget<UUserWidget>(GetWorld(), PauseWidgetClass);
-	PauseWidget = Cast<UPauseWidget>(UserPauseWidget);
+	if (UserWidget)
+	{
+		PlayerWidget = Cast<UPlayerWidget>(UserWidget);
+		PlayerWidget->AddToViewport();
+	}
+
+
+	if (PauseWidgetClass)
+	{
+		auto UserPauseWidget = CreateWidget<UUserWidget>(GetWorld(), PauseWidgetClass);
+		if (UserPauseWidget)
+		{
+			PauseWidget = Cast<UPauseWidget>(UserPauseWidget);
+		}
+		if (PauseWidgetClass)
+		{
+			PauseWidget->AddToViewport();
+			PauseWidget->SetVisibility(ESlateVisibility::Hidden);
+		}
+	}
 }
 
 void ASubmarineCharacter::Tick(float DeltaTime)
@@ -88,13 +104,19 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 			if (Hit.GetActor()->ActorHasTag("Lever") || Hit.GetActor()->ActorHasTag("Button"))
 			{
 				InteractActor = Hit.GetActor();
-				PlayerWidget->SetPromptE(true);
+				if (PlayerWidget)
+				{
+					PlayerWidget->SetPromptE(true);
+				}
 			}
 
 			if (Hit.GetActor()->ActorHasTag("Inspect"))
 			{
 				CurrentInspectActor = Hit.GetActor();
-				PlayerWidget->SetPromptF(true);
+				if (PlayerWidget)
+				{
+					PlayerWidget->SetPromptF(true);
+				}
 			}
 
 			if (Hit.GetActor()->Implements<UInteraction>())
@@ -108,9 +130,13 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		}
 		else
 		{
+			InteractActor = nullptr;
 			CurrentInspectActor = nullptr;
-			PlayerWidget->SetPromptF(false);
-			PlayerWidget->SetPromptE(false);
+			if (PlayerWidget)
+			{
+				PlayerWidget->SetPromptF(false);
+				PlayerWidget->SetPromptE(false);
+			}
 		}
 	}
 }
@@ -205,40 +231,53 @@ void ASubmarineCharacter::ExitInspect()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Exit Inspect"));
 
-	if (IsInspecting)
+	if (IsInspecting && IsValid(CurrentInspectActor))
 	{
 		IsInspecting = false;
 		CurrentInspectActor->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 		CurrentInspectActor->SetActorTransform(InitialInspectTransform);
 		CurrentInspectActor = nullptr;
-
-
-		auto PlayerController = Cast<APlayerController>(GetController());
-		auto InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
-			PlayerController->GetLocalPlayer());
-		InputSubsystem->RemoveMappingContext(InspectMappingContext);
-		InputSubsystem->AddMappingContext(DefaultMappingContext, 0);
+	}
+	if (auto PlayerController = Cast<APlayerController>(GetController()))
+	{
+		if (auto InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
+			PlayerController->GetLocalPlayer()))
+		{
+			InputSubsystem->RemoveMappingContext(InspectMappingContext);
+			InputSubsystem->AddMappingContext(DefaultMappingContext, 0);
+		}
 	}
 }
 
 
 void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 {
+	if (IsInspecting && CurrentInspectActor)
+	{
+		FVector2D RotateInput = Value.Get<FVector2D>();
+		FRotator NewRotation = FRotator(0.f, RotateInput.X * 5.f, 0.f);
+		CurrentInspectActor->AddActorLocalRotation(NewRotation);
+	}
+
+
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Entering Inspect"));
 }
 
 void ASubmarineCharacter::InteractWithObject()
 {
-	if (InteractActor->ActorHasTag("Button"))
+	if (InteractActor != nullptr)
 	{
-		ALeverCondition* button = Cast<ALeverCondition>(InteractActor);
-		button->ButtonPressed();
-	}
+		if (InteractActor->ActorHasTag("Button"))
+		{
+			ALeverCondition* button = Cast<ALeverCondition>(InteractActor);
+			button->ButtonPressed();
+		}
 
-	if (InteractActor->ActorHasTag("Lever"))
-	{
-		ALever* Lever = Cast<ALever>(InteractActor);
-		Lever->ActivateLever();
+		if (InteractActor->ActorHasTag("Lever"))
+		{
+			ALever* Lever = Cast<ALever>(InteractActor);
+			Lever->ActivateLever();
+		}
 	}
 }
 

@@ -9,7 +9,9 @@
 			"Lever.gen.cpp.obj",
 			"LeverCondition.gen.cpp.obj",
 			"NPCCharacter.gen.cpp.obj",
+			"PauseWidget.gen.cpp.obj",
 			"PlayerWidget.gen.cpp.obj",
+			"Submarine.init.gen.cpp.obj",
 			"SubmarineCharacter.gen.cpp.obj",
 			"SubmarineGameMode.gen.cpp.obj",
 			"SubmarinePlayerController.gen.cpp.obj",
@@ -26,16 +28,14 @@
 			"LeverCondition.cpp.obj",
 			"NPCCharacter.cpp.obj",
 			"PlayerWidget.cpp.obj",
+			"WaterMecanic.cpp.obj",
 			"Submarine.cpp.obj",
 			"SubmarineGameMode.cpp.obj",
 			"SubmarinePlayerController.cpp.obj",
 			"SubmarineProjectile.cpp.obj",
 			"TP_PickUpComponent.cpp.obj",
 			"TP_WeaponComponent.cpp.obj",
-			"PauseWidget.gen.cpp.obj",
-			"Submarine.init.gen.cpp.obj",
 			"PauseWidget.cpp.obj",
-			"WaterMecanic.cpp.obj",
 			"SubmarineCharacter.cpp.obj"
 		]
 	}

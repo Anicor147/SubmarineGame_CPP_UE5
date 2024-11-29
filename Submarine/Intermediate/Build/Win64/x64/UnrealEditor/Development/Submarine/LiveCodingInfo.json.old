@@ -27,15 +27,15 @@
 			"Lever.cpp.obj",
 			"LeverCondition.cpp.obj",
 			"NPCCharacter.cpp.obj",
+			"PauseWidget.cpp.obj",
 			"PlayerWidget.cpp.obj",
+			"WaterMecanic.cpp.obj",
 			"Submarine.cpp.obj",
 			"SubmarineGameMode.cpp.obj",
 			"SubmarinePlayerController.cpp.obj",
 			"SubmarineProjectile.cpp.obj",
 			"TP_PickUpComponent.cpp.obj",
 			"TP_WeaponComponent.cpp.obj",
-			"PauseWidget.cpp.obj",
-			"WaterMecanic.cpp.obj",
 			"SubmarineCharacter.cpp.obj"
 		]
 	}

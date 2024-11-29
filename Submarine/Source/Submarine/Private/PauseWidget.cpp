@@ -17,12 +17,15 @@ void UPauseWidget::PauseGame()
 	{
 		if (this->IsVisible())
 		{
-			this->RemoveFromParent();
+			this->SetVisibility(ESlateVisibility::Hidden);
+			// this->RemoveFromParent();
 			UGameplayStatics::SetGamePaused(GetWorld(), false);
 		}
 		else
 		{
-			this->AddToViewport();
+			
+			this->SetVisibility(ESlateVisibility::Visible);
+			// this->AddToViewport();
 			UGameplayStatics::SetGamePaused(GetWorld(), true);
 		}
 	}

@@ -252,7 +252,6 @@
     <None Include="..\..\Submarine.uproject"/>
     <None Include="..\..\Source\Submarine.Target.cs"/>
     <None Include="..\..\Source\SubmarineEditor.Target.cs"/>
-    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
