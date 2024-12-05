@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_LeverCondition_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALeverCondition(); \
 	friend struct Z_Construct_UClass_ALeverCondition_Statics; \
 public: \
 	DECLARE_CLASS(ALeverCondition, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Submarine"), NO_API) \
-	DECLARE_SERIALIZER(ALeverCondition)
+	DECLARE_SERIALIZER(ALeverCondition) \
+	virtual UObject* _getUObject() const override { return const_cast<ALeverCondition*>(this); }
 
 
-#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ALeverCondition(ALeverCondition&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~ALeverCondition();
 
 
-#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_11_PROLOG
-#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_14_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_12_PROLOG
+#define FID_Submarine_Source_Submarine_Private_LeverCondition_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_LeverCondition_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_LeverCondition_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_LeverCondition_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_LeverCondition_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

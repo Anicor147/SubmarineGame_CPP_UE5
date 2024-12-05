@@ -18,6 +18,7 @@
 #include "Private/PlayerWidget.h"
 #include "Private/Lever.h"
 #include "Private/Interaction.h"
+#include "Private/InteractE.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -74,7 +75,7 @@ void ASubmarineCharacter::BeginPlay()
 		{
 			PauseWidget = Cast<UPauseWidget>(UserPauseWidget);
 		}
-		if (PauseWidgetClass)
+		if (PauseWidget)
 		{
 			PauseWidget->AddToViewport();
 			PauseWidget->SetVisibility(ESlateVisibility::Hidden);
@@ -101,22 +102,19 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
-			if (Hit.GetActor()->ActorHasTag("Lever") || Hit.GetActor()->ActorHasTag("Button"))
+			// if (Hit.GetActor()->ActorHasTag("Lever") || Hit.GetActor()->ActorHasTag("Button") || Hit.GetActor()->GetClass()->ImplementsInterface(UInteractE :: StaticClass()))
+			if (Hit.GetActor()->GetClass()->ImplementsInterface(UInteractE :: StaticClass()))
 			{
 				InteractActor = Hit.GetActor();
-				if (PlayerWidget)
-				{
-					PlayerWidget->SetPromptE(true);
-				}
+
+				PlayerWidget->SetPromptE(true);
 			}
 
 			if (Hit.GetActor()->ActorHasTag("Inspect"))
 			{
 				CurrentInspectActor = Hit.GetActor();
-				if (PlayerWidget)
-				{
-					PlayerWidget->SetPromptF(true);
-				}
+
+				PlayerWidget->SetPromptF(true);
 			}
 
 			if (Hit.GetActor()->Implements<UInteraction>())
@@ -132,11 +130,8 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		{
 			InteractActor = nullptr;
 			CurrentInspectActor = nullptr;
-			if (PlayerWidget)
-			{
-				PlayerWidget->SetPromptF(false);
-				PlayerWidget->SetPromptE(false);
-			}
+			PlayerWidget->SetPromptF(false);
+			PlayerWidget->SetPromptE(false);
 		}
 	}
 }
@@ -211,13 +206,17 @@ void ASubmarineCharacter::EnterInspect()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Entering Inspect"));
 
-	if (!IsInspecting && IsValid(CurrentInspectActor))
+	if (!IsInspecting && CurrentInspectActor)
 	{
 		IsInspecting = true;
 		PlayerWidget->SetPromptF(false);
 		InspectOrigin->SetRelativeRotation(FRotator::ZeroRotator);
 		InitialInspectTransform = CurrentInspectActor->GetActorTransform();
 		CurrentInspectActor->AttachToComponent(InspectOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+		InitialSize = CurrentInspectActor->GetActorScale3D();
+		auto ModifiedSize = InitialSize * 0.3f;
+		CurrentInspectActor->SetActorScale3D(ModifiedSize);
+
 
 		auto PlayerController = Cast<APlayerController>(GetController());
 		auto InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
@@ -231,7 +230,7 @@ void ASubmarineCharacter::ExitInspect()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Exit Inspect"));
 
-	if (IsInspecting && IsValid(CurrentInspectActor))
+	if (IsInspecting && CurrentInspectActor)
 	{
 		IsInspecting = false;
 		CurrentInspectActor->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
@@ -255,7 +254,7 @@ void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 	if (IsInspecting && CurrentInspectActor)
 	{
 		FVector2D RotateInput = Value.Get<FVector2D>();
-		FRotator NewRotation = FRotator(0.f, RotateInput.X * 5.f, 0.f);
+		FRotator NewRotation = FRotator(RotateInput.Y, RotateInput.X * 5.f, 0.f);
 		CurrentInspectActor->AddActorLocalRotation(NewRotation);
 	}
 
@@ -265,7 +264,7 @@ void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 
 void ASubmarineCharacter::InteractWithObject()
 {
-	if (InteractActor != nullptr)
+	if (InteractActor)
 	{
 		if (InteractActor->ActorHasTag("Button"))
 		{

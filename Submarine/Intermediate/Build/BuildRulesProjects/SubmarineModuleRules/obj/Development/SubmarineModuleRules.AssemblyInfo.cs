@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubmarineModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c8a621d48e419e3ad7253fc302ae96b08245933")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03d8ace68af1fc6c96739ed1fdb290a58928e36c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubmarineModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubmarineModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

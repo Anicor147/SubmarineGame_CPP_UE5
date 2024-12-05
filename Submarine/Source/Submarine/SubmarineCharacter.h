@@ -114,5 +114,7 @@ private:
 	bool IsInspecting;
 	AActor* CurrentInspectActor;
 	AActor* InteractActor;
+		
 	FTransform InitialInspectTransform;
+	FVector InitialSize;	
 };

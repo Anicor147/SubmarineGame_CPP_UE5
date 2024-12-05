@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\interacte.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\submarineeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_4.h.pch",
+        "Includes": [
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\submarine\\definitions.submarine.h",
+            "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\interacte.h",
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\interacte.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -3,13 +3,7 @@
 
 #include "PauseWidget.h"
 
-#include "EnhancedInputComponent.h"
-#include "ErrorCodes.h"
-#include "GameFramework/Character.h"
-#include "GenericPlatform/GenericPlatformChunkInstall.h"
 #include "Kismet/GameplayStatics.h"
-#include "Preferences/PersonaOptions.h"
-#include "Submarine/SubmarineCharacter.h"
 
 void UPauseWidget::PauseGame()
 {
@@ -18,14 +12,12 @@ void UPauseWidget::PauseGame()
 		if (this->IsVisible())
 		{
 			this->SetVisibility(ESlateVisibility::Hidden);
-			// this->RemoveFromParent();
 			UGameplayStatics::SetGamePaused(GetWorld(), false);
 		}
 		else
 		{
 			
 			this->SetVisibility(ESlateVisibility::Visible);
-			// this->AddToViewport();
 			UGameplayStatics::SetGamePaused(GetWorld(), true);
 		}
 	}

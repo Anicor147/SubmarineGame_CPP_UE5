@@ -7,6 +7,8 @@
         "Includes": [
             "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\submarine\\definitions.submarine.h",
             "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\lever.h",
+            "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\interacte.h",
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\interacte.generated.h",
             "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\lever.generated.h"
         ],
         "ImportedModules": [],

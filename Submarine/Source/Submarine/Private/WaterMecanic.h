@@ -23,8 +23,8 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Plane;
 	
-	// UPROPERTY(VisibleAnywhere)
-	// UNiagaraComponent* WaterComponent;
+	 UPROPERTY(VisibleAnywhere)
+	 UNiagaraComponent* WaterComponent;
 
 private:
 	 float Timer;
@@ -41,7 +41,7 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
 	
 
 };

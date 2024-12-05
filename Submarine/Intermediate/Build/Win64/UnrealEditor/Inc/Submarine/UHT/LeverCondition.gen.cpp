@@ -16,6 +16,7 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
 
@@ -68,6 +69,7 @@ struct Z_Construct_UClass_ALeverCondition_Statics
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_LeverArray;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ALeverCondition>::IsAbstract,
 	};
@@ -95,6 +97,9 @@ UObject* (*const Z_Construct_UClass_ALeverCondition_Statics::DependentSingletons
 	(UObject* (*)())Z_Construct_UPackage__Script_Submarine,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALeverCondition_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ALeverCondition_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UInteractE_NoRegister, (int32)VTABLE_OFFSET(ALeverCondition, IInteractE), false },  // 180728773
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ALeverCondition_Statics::ClassParams = {
 	&ALeverCondition::StaticClass,
 	"Engine",
@@ -102,11 +107,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ALeverCondition_Statics
 	DependentSingletons,
 	nullptr,
 	Z_Construct_UClass_ALeverCondition_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_ALeverCondition_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x008000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ALeverCondition_Statics::Class_MetaDataParams), Z_Construct_UClass_ALeverCondition_Statics::Class_MetaDataParams)
 };
@@ -130,10 +135,10 @@ ALeverCondition::~ALeverCondition() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALeverCondition, ALeverCondition::StaticClass, TEXT("ALeverCondition"), &Z_Registration_Info_UClass_ALeverCondition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALeverCondition), 3987845584U) },
+		{ Z_Construct_UClass_ALeverCondition, ALeverCondition::StaticClass, TEXT("ALeverCondition"), &Z_Registration_Info_UClass_ALeverCondition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALeverCondition), 677718441U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_3966830975(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_654899447(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

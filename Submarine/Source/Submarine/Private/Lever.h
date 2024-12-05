@@ -3,13 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InteractE.h"
 #include "GameFramework/Actor.h"
 #include "Lever.generated.h"
 
 class ALeverCondition;
 
 UCLASS()
-class ALever : public AActor
+class ALever : public AActor ,public IInteractE
 {
 	GENERATED_BODY()
 

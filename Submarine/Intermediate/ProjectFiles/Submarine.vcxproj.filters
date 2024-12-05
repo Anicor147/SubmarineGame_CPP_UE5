@@ -11,6 +11,7 @@
     <None Include="..\..\Source\SubmarineEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -98,6 +99,12 @@
     <ClCompile Include="..\..\Source\Submarine\Private\Generator.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\InteractE.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\InteractE.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Interaction.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
@@ -120,6 +127,18 @@
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\NumPad.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\NumPad.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\NumpadButton.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\NumpadButton.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\PauseWidget.cpp">
