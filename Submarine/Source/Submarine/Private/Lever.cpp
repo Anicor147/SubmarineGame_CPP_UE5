@@ -49,3 +49,13 @@ void ALever::ResetLever()
 	doOnce = false;
 	cylinder->SetRelativeRotation(FRotator(0, 0, 30));
 }
+
+void ALever::Interact()
+{
+	if (!doOnce)
+	{
+		cylinder->SetRelativeRotation(FRotator(0, 0, -40));
+		condition->CheckSequence(value);
+		doOnce = true;
+	}
+}

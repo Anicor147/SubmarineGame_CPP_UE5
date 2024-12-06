@@ -8,6 +8,7 @@
 #include "InteractE.h"
 #include "Components/TextRenderComponent.h"
 #include "GameFramework/Actor.h"
+#include "NumPad.h"
 #include "NumpadButton.generated.h"
 
 UCLASS()
@@ -18,6 +19,8 @@ class ANumpadButton : public AActor , public IInteractE
 public:	
 	// Sets default values for this actor's properties
 	ANumpadButton();
+	
+	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Base;
@@ -25,6 +28,9 @@ public:
 	UStaticMeshComponent* Cube;
 	UPROPERTY(VisibleAnywhere)
 	UTextRenderComponent* Text;
+
+	UPROPERTY(EditAnywhere, Category = "1-Numpad")
+	ANumPad* Numpad;
 	
 private:
 	UPROPERTY(EditAnywhere)
@@ -36,5 +42,5 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	virtual void Interact() override;
 };

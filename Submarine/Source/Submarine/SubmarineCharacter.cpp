@@ -102,8 +102,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
-			// if (Hit.GetActor()->ActorHasTag("Lever") || Hit.GetActor()->ActorHasTag("Button") || Hit.GetActor()->GetClass()->ImplementsInterface(UInteractE :: StaticClass()))
-			if (Hit.GetActor()->GetClass()->ImplementsInterface(UInteractE :: StaticClass()))
+			if (Hit.GetActor()->Implements<UInteractE>())
 			{
 				InteractActor = Hit.GetActor();
 
@@ -117,6 +116,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 				PlayerWidget->SetPromptF(true);
 			}
 
+			//Preparation pour les vis du generateur
 			if (Hit.GetActor()->Implements<UInteraction>())
 			{
 				if (IInteraction* InteractionActor = Cast<IInteraction>(Hit.GetActor()))
@@ -266,16 +266,9 @@ void ASubmarineCharacter::InteractWithObject()
 {
 	if (InteractActor)
 	{
-		if (InteractActor->ActorHasTag("Button"))
+		if (InteractActor->GetClass()->ImplementsInterface(UInteractE::StaticClass()))
 		{
-			ALeverCondition* button = Cast<ALeverCondition>(InteractActor);
-			button->ButtonPressed();
-		}
-
-		if (InteractActor->ActorHasTag("Lever"))
-		{
-			ALever* Lever = Cast<ALever>(InteractActor);
-			Lever->ActivateLever();
+			Cast<IInteractE>(InteractActor)->Interact();
 		}
 	}
 }

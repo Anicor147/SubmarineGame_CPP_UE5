@@ -26,10 +26,17 @@ ANumpadButton::ANumpadButton()
 void ANumpadButton::BeginPlay()
 {
 	Super::BeginPlay();
+	auto text = FString::FromInt(Value);
+	Text->SetText(FText::FromString(text));
 }
 
 // Called every frame
 void ANumpadButton::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void ANumpadButton::Interact()
+{
+	Numpad->CheckSequence(Value);
 }

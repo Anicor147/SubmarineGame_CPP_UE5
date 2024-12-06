@@ -46,5 +46,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual  void CheckSequence(int Sequence);
 	virtual void ResetLevers();
-	virtual void ButtonPressed();
+	virtual void Interact() override;
 };

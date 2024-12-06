@@ -67,8 +67,9 @@ void ALeverCondition::ResetLevers()
 	SequenceCorrect = 0;
 }
 
-void ALeverCondition::ButtonPressed()
+void ALeverCondition::Interact()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Turquoise, TEXT("From Button Interact"));
 	if (SequenceCorrect == SequenceArray.Num())
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("The Sequence is Correct"));

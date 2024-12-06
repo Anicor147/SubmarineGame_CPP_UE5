@@ -9,6 +9,9 @@
 ANumPad::ANumPad()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	// ReceivedValueArray = {0, 0, 0, 0, 0};
+	SequenceCorrect = 0;
+
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
@@ -35,4 +38,52 @@ void ANumPad::BeginPlay()
 void ANumPad::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void ANumPad::CheckSequence(int Value)
+{
+	if (ReceivedValueArray.Num() < SequenceArray.Num())
+	{
+		ReceivedValueArray.Push(Value);
+
+		CurrentCode += FString::FromInt(Value);
+
+		Text->SetText(FText::FromString(CurrentCode));
+	}
+	if (ReceivedValueArray.Num() == SequenceArray.Num())
+	{
+		for (int i = 0; i < SequenceArray.Num(); i++)
+		{
+			if (ReceivedValueArray[i] == SequenceArray[i])
+			{
+				SequenceCorrect++;
+			}
+			else
+			{
+				SequenceCorrect--;
+				break;
+			}
+		}
+	}
+}
+
+void ANumPad::ResetSequence()
+{
+	CurrentIndex = 0;
+	SequenceCorrect = 0;
+	CurrentCode = 0;
+	ReceivedValueArray.Empty();
+}
+
+void ANumPad::Interact()
+{
+	if (SequenceCorrect == SequenceArray.Num())
+	{
+		Text->SetText(FText::FromString("Success"));
+	}
+	else
+	{
+		Text->SetText(FText::FromString("Error"));
+		ResetSequence();
+	}
 }

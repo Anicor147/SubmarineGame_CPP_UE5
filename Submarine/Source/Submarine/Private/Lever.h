@@ -41,6 +41,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void ActivateLever();
 	virtual void ResetLever();
+	virtual void Interact() override;
 private:
 	UPROPERTY(EditAnywhere)
 	int value;

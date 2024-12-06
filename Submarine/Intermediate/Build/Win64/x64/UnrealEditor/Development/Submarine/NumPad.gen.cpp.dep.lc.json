@@ -7,6 +7,8 @@
         "Includes": [
             "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\submarine\\definitions.submarine.h",
             "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\numpad.h",
+            "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\interacte.h",
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\interacte.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\textrendercomponent.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\textrendercomponent.generated.h",
             "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealeditor\\inc\\submarine\\uht\\numpad.generated.h"
