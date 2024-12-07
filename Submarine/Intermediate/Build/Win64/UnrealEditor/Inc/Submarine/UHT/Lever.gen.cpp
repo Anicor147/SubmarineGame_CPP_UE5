@@ -11,8 +11,9 @@ void EmptyLinkFunctionForGeneratedCodeLever() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition_NoRegister();
@@ -41,23 +42,27 @@ struct Z_Construct_UClass_ALever_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_base_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skeletal_MetaData[] = {
 		{ "Category", "Lever" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* base;\n// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* cylinder;\n// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* ball;\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_cylinder_MetaData[] = {
-		{ "Category", "Lever" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/Lever.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ball_MetaData[] = {
-		{ "Category", "Lever" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/Lever.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "UPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* base;\nUPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* cylinder;\nUPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* ball;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_condition_MetaData[] = {
 		{ "Category", "Lever Condition" },
+		{ "ModuleRelativePath", "Private/Lever.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ActionnerMontage_MetaData[] = {
+		{ "Category", "Lever Montage" },
+		{ "ModuleRelativePath", "Private/Lever.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DesactionnerMontage_MetaData[] = {
+		{ "Category", "Lever Montage" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_value_MetaData[] = {
@@ -66,10 +71,10 @@ struct Z_Construct_UClass_ALever_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_base;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_cylinder;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ball;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_skeletal;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_condition;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ActionnerMontage;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DesactionnerMontage;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_value;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -80,17 +85,17 @@ struct Z_Construct_UClass_ALever_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_base = { "base", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, base), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_base_MetaData), NewProp_base_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_cylinder = { "cylinder", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, cylinder), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_cylinder_MetaData), NewProp_cylinder_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_ball = { "ball", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, ball), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ball_MetaData), NewProp_ball_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_skeletal = { "skeletal", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, skeletal), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_skeletal_MetaData), NewProp_skeletal_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_condition = { "condition", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, condition), Z_Construct_UClass_ALeverCondition_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_condition_MetaData), NewProp_condition_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_ActionnerMontage = { "ActionnerMontage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, ActionnerMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActionnerMontage_MetaData), NewProp_ActionnerMontage_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_DesactionnerMontage = { "DesactionnerMontage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, DesactionnerMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DesactionnerMontage_MetaData), NewProp_DesactionnerMontage_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, value), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALever_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_Root,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_base,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_cylinder,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_ball,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_skeletal,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_condition,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_ActionnerMontage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_DesactionnerMontage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_value,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALever_Statics::PropPointers) < 2048);
@@ -137,10 +142,10 @@ ALever::~ALever() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 2429933481U) },
+		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 824357433U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_1519784796(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_2075920265(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

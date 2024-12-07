@@ -10,7 +10,7 @@
 class ALeverCondition;
 
 UCLASS()
-class ALever : public AActor ,public IInteractE
+class ALever : public AActor ,public IInteractE 
 {
 	GENERATED_BODY()
 
@@ -22,15 +22,25 @@ public:
 	ALever();
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
+	// UPROPERTY(VisibleAnywhere)
+	// UStaticMeshComponent* base;
+	// UPROPERTY(VisibleAnywhere)
+	// UStaticMeshComponent* cylinder;
+	// UPROPERTY(VisibleAnywhere)
+	// UStaticMeshComponent* ball;
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* base;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* cylinder;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* ball;
+	USkeletalMeshComponent* skeletal;
 
 	UPROPERTY(EditAnywhere, category = "Lever Condition")
 	ALeverCondition* condition;
+
+
+	UPROPERTY(EditAnywhere, category = "Lever Montage")
+	UAnimMontage* ActionnerMontage;
+
+	UPROPERTY(EditAnywhere, category = "Lever Montage")
+	UAnimMontage* DesactionnerMontage;
+protected:
 
 protected:
 	// Called when the game starts or when spawned
@@ -42,6 +52,9 @@ public:
 	virtual void ActivateLever();
 	virtual void ResetLever();
 	virtual void Interact() override;
+private:
+	void InitAnimations();
+	void InteractMontage();
 private:
 	UPROPERTY(EditAnywhere)
 	int value;
