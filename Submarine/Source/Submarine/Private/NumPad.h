@@ -5,6 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "InteractE.h"
+#include "Locker.h"
 #include "GameFramework/Actor.h"
 #include "Components/TextRenderComponent.h"
 #include "NumPad.generated.h"
@@ -12,7 +13,7 @@ class ANumpadButton;
 class APlayerController;
 
 UCLASS()
-class ANumPad : public AActor , public IInteractE
+class ANumPad : public AActor, public IInteractE
 {
 	GENERATED_BODY()
 
@@ -31,15 +32,20 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UTextRenderComponent* Text;
 
+	UPROPERTY(VisibleAnywhere)
+	USkeletalMeshComponent* NumpadMesh;
+
+	UPROPERTY(EditAnywhere)
+	ALocker* Locker;
 private:
-	UPROPERTY(EditAnywhere ,Category = "Sequence")
+	UPROPERTY(EditAnywhere, Category = "Sequence")
 	TArray<int> SequenceArray;
 	UPROPERTY(EditAnywhere)
 	TArray<int> ReceivedValueArray;
 
 	UPROPERTY(EditAnywhere)
 	AActor* Blockage;
-	
+
 	int CurrentIndex = 0;
 	int SequenceCorrect;
 	FString CurrentCode;

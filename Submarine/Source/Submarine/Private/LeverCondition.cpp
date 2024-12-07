@@ -14,10 +14,7 @@ ALeverCondition::ALeverCondition()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
-	Base = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
-	Base->SetupAttachment(Root);
-
-	Button = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Button"));
+	Button = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Button"));
 	Button->SetupAttachment(Root);
 }
 

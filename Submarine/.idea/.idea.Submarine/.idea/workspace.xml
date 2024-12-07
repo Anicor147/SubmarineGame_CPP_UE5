@@ -21,6 +21,9 @@
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_12.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_12.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_13.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_13.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_14.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_14.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_15.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_15.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_16.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_16.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_17.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_17.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_2.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_3.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_4.pdb" afterDir="false" />
@@ -30,34 +33,56 @@
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_8.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_8.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_9.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.patch_9.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Submarine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Character_Animation/ABP_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Character_Animation/ABP_NPC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/BP/BP_Lever.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP/BP_Lever.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP/BP_LeverCheckSequence.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP/BP_LeverCheckSequence.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP/BP_Numpad.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP/BP_Numpad.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP/BP_NumpadButton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP/BP_NumpadButton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/0/C7/WHPOJQZH22Q0JFKL0ZUON8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/0/C7/WHPOJQZH22Q0JFKL0ZUON8.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/2T/KXAMAB7QU1HV9MWL613YJC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/2T/KXAMAB7QU1HV9MWL613YJC.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/QI/Z0GHI6MY0GD72UE136L8T8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/QI/Z0GHI6MY0GD72UE136L8T8.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/R9/YZJ21VLP9APUN8O9186ZIL.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/R9/YZJ21VLP9APUN8O9186ZIL.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/RM/7XMULQJK2NZ9NF7DUP8M7Z.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/RM/7XMULQJK2NZ9NF7DUP8M7Z.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/FY/JRKCL5R453R2CO5W7ADLVE.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/FY/JRKCL5R453R2CO5W7ADLVE.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/XT/XCK6DLZEP5U95HS5WLMGOI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/XT/XCK6DLZEP5U95HS5WLMGOI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/1Q/WJIAG9P0DCN4EKVJKFU49N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/1Q/WJIAG9P0DCN4EKVJKFU49N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/I8/LH9T10MU22N3EEPTZ4GAFC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/I8/LH9T10MU22N3EEPTZ4GAFC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/GM/3B4RYLF8HNFX02RZZ506JW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/GM/3B4RYLF8HNFX02RZZ506JW.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/P6/B8HPU8OYLP92HN92CV28B7.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/P6/B8HPU8OYLP92HN92CV28B7.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/49/E7938VEEGK0VIVR54NOHML.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/49/E7938VEEGK0VIVR54NOHML.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/KY/X16H0MZAID4NOYXBA5BW6S.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/KY/X16H0MZAID4NOYXBA5BW6S.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/0L/10MTWXDF482YULS0R3MQVW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/0L/10MTWXDF482YULS0R3MQVW.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/WV/Z64CEWYOO1TBJZ7V1IDWOP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/WV/Z64CEWYOO1TBJZ7V1IDWOP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/ZE/G2JJJL9A5O2EK61P4KO08N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/ZE/G2JJJL9A5O2EK61P4KO08N.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/QE/EHA9BB0ODMIXJB6SD0SPJS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/QE/EHA9BB0ODMIXJB6SD0SPJS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/SubmarineModuleRules/obj/Development/SubmarineModuleRules.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/SubmarineModuleRules/obj/Development/SubmarineModuleRules.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/SubmarineModuleRules/obj/Development/SubmarineModuleRules.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRulesProjects/SubmarineModuleRules/obj/Development/SubmarineModuleRules.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/D/WC/AO9PXG8EB5IVL4YJB8ESD9.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/F/56/ZG6ITHBD6IWXXR9MAP03Z5.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/F/56/ZG6ITHBD6IWXXR9MAP03Z5.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/ActionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/ActionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/SubmarineEditor/Development/SubmarineEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/SubmarineEditor/Development/SubmarineEditor.uhtmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Lever.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Lever.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/LeverCondition.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/LeverCondition.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumPad.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumPad.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumPad.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumPad.generated.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumpadButton.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/NumpadButton.gen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Submarine.init.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Submarine.init.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/SubmarineCharacter.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/SubmarineCharacter.gen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Submarine/UHT/Timestamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/SubmarineEditor/Development/DependencyCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/SubmarineEditor/Development/DependencyCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/SubmarineEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/SubmarineEditor/Development/Makefile.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/ActionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/ActionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Lever.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Lever.cpp.dep.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Lever.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Lever.cpp.dep.lc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/LiveCodingInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/LiveCodingInfo.json.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/LiveCodingInfo.json.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.dep.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.dep.lc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/Module.Submarine.cpp.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.cpp.dep.lc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.gen.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.gen.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.gen.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumPad.gen.cpp.dep.lc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.cpp.dep.lc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.gen.cpp.dep.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.gen.cpp.dep.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.gen.cpp.dep.lc.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/NumpadButton.gen.cpp.dep.lc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.dll.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.dll.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.dll.rsp.old" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.dll.rsp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Submarine/UnrealEditor-Submarine.exp" afterDir="false" />
@@ -66,9 +91,15 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Submarine.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Submarine.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Submarine.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Submarine.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/Lever.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/Lever.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/Lever.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/Lever.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/LeverCondition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/LeverCondition.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/LeverCondition.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/LeverCondition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/NumPad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/NumPad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/NumPad.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/NumPad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/SubmarineCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/SubmarineCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Submarine/SubmarineCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Submarine/SubmarineCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,10 +120,14 @@
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/InteractE.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/LeverAnimNotify.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/LeverAnimNotify.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/Locker.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/Locker.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/NumPad.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/NumPad.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/NumpadButton.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/Weapon/Hammer.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Submarine/Private/Weapon/Hammer.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -219,7 +254,7 @@
       <workItem from="1733491532133" duration="16514000" />
       <workItem from="1733525800184" duration="860000" />
       <workItem from="1733531251748" duration="6150000" />
-      <workItem from="1733578366242" duration="5346000" />
+      <workItem from="1733578366242" duration="26205000" />
     </task>
     <servers />
   </component>

@@ -14,15 +14,6 @@ ALever::ALever()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
-	// base = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
-	// base->SetupAttachment(Root);
-	//
-	// cylinder = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cylinder"));
-	// cylinder->SetupAttachment(Root);
-	//
-	// ball = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ball"));
-	// ball->SetupAttachment(Root);
-
 	skeletal = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Skeletal"));
 	skeletal->SetupAttachment(Root);
 }
@@ -44,7 +35,6 @@ void ALever::ActivateLever()
 {
 	if (!doOnce)
 	{
-		// cylinder->SetRelativeRotation(FRotator(0, 0, -40));
 		condition->CheckSequence(value);
 		doOnce = true;
 	}
@@ -53,8 +43,8 @@ void ALever::ActivateLever()
 void ALever::ResetLever()
 {
 	doOnce = false;
-	// cylinder->SetRelativeRotation(FRotator(0, 0, 30));
-	skeletal->PlayAnimation(ActionnerMontage, false);
+	auto instance = skeletal ->GetAnimInstance();
+	instance ->Montage_Stop(0.0f,instance->GetCurrentActiveMontage());
 }
 
 void ALever::Interact()
@@ -64,16 +54,10 @@ void ALever::Interact()
 		UAnimInstance* AnimInstance = skeletal->GetAnimInstance();
 		if (AnimInstance && !AnimInstance->Montage_IsPlaying(DesactionnerMontage))
 		{
-			// cylinder->SetRelativeRotation(FRotator(0, 0, -40));
+			AnimInstance->Montage_Stop(0.0f,AnimInstance->GetCurrentActiveMontage());
 			condition->CheckSequence(value);
-			// skeletal->PlayAnimation(DesactionnerMontage, false);
-			// skeletal->SetPlayRate(0.001f);
 			AnimInstance->Montage_Play(DesactionnerMontage, 1.0f);
 			doOnce = true;
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Montage already playing, cannot interact again."));
 		}
 	}
 }

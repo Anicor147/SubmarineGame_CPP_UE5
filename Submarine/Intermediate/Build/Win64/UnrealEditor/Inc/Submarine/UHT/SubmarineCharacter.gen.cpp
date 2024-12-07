@@ -120,6 +120,12 @@ struct Z_Construct_UClass_ASubmarineCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SubmarineCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WeaponOrigin_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Camera" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SubmarineCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMappingContext_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
@@ -173,6 +179,7 @@ struct Z_Construct_UClass_ASubmarineCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnterInspectAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExitInspectAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InspectOrigin;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponOrigin;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InspectMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractAction;
@@ -196,6 +203,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineChar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_EnterInspectAction = { "EnterInspectAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, EnterInspectAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnterInspectAction_MetaData), NewProp_EnterInspectAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_ExitInspectAction = { "ExitInspectAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, ExitInspectAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExitInspectAction_MetaData), NewProp_ExitInspectAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InspectOrigin = { "InspectOrigin", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, InspectOrigin), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InspectOrigin_MetaData), NewProp_InspectOrigin_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_WeaponOrigin = { "WeaponOrigin", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, WeaponOrigin), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponOrigin_MetaData), NewProp_WeaponOrigin_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMappingContext_MetaData), NewProp_DefaultMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InspectMappingContext = { "InspectMappingContext", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, InspectMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InspectMappingContext_MetaData), NewProp_InspectMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InteractAction = { "InteractAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, InteractAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractAction_MetaData), NewProp_InteractAction_MetaData) };
@@ -213,6 +221,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASubmarin
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_EnterInspectAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_ExitInspectAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InspectOrigin,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_WeaponOrigin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_DefaultMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InspectMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InteractAction,
@@ -263,10 +272,10 @@ ASubmarineCharacter::~ASubmarineCharacter() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 3013078184U) },
+		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 201730259U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_4080428460(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_4146098260(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

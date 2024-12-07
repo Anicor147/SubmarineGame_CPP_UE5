@@ -22,10 +22,10 @@ public:
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Base;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Cube;
+	 UPROPERTY(VisibleAnywhere)
+	 UStaticMeshComponent* Base;
+	// UPROPERTY(VisibleAnywhere)
+	// UStaticMeshComponent* Cube;
 	UPROPERTY(VisibleAnywhere)
 	UTextRenderComponent* Text;
 

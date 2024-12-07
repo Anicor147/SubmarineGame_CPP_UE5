@@ -3,6 +3,8 @@
 
 #include "NumPad.h"
 
+#include "LeverAnimNotify.h"
+#include "Locker.h"
 #include "Components/Button.h"
 
 // Sets default values
@@ -26,6 +28,9 @@ ANumPad::ANumPad()
 
 	Text = CreateDefaultSubobject<UTextRenderComponent>(TEXT("Text"));
 	Text->SetupAttachment(RootComponent);
+
+	NumpadMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("NumpadMesh"));
+	NumpadMesh->SetupAttachment(Root);
 }
 
 // Called when the game starts or when spawned
@@ -80,6 +85,7 @@ void ANumPad::Interact()
 	if (SequenceCorrect == SequenceArray.Num())
 	{
 		Text->SetText(FText::FromString("Success"));
+		Locker->OpenDoor();
 	}
 	else
 	{

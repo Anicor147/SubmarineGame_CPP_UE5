@@ -50,6 +50,9 @@ class ASubmarineCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USceneComponent* InspectOrigin;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	USceneComponent* WeaponOrigin;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputMappingContext* DefaultMappingContext;
 
@@ -98,7 +101,7 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
-
+	USceneComponent* GetWeaponOrigin() const { return WeaponOrigin; }
 private:
 	class UPlayerWidget* PlayerWidget;
 	class UPauseWidget* PauseWidget;

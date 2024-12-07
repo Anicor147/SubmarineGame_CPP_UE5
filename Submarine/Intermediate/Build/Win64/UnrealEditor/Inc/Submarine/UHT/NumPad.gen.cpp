@@ -13,8 +13,10 @@ void EmptyLinkFunctionForGeneratedCodeNumPad() {}
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTextRenderComponent_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_ALocker_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ANumPad();
 SUBMARINE_API UClass* Z_Construct_UClass_ANumPad_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
@@ -68,6 +70,15 @@ struct Z_Construct_UClass_ANumPad_Statics
 		{ "ToolTip", "might change for a niagara light" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumpadMesh_MetaData[] = {
+		{ "Category", "NumPad" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Private/NumPad.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Locker_MetaData[] = {
+		{ "Category", "NumPad" },
+		{ "ModuleRelativePath", "Private/NumPad.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SequenceArray_MetaData[] = {
 		{ "Category", "Sequence" },
 		{ "ModuleRelativePath", "Private/NumPad.h" },
@@ -86,6 +97,8 @@ struct Z_Construct_UClass_ANumPad_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Cube;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Lights;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Text;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NumpadMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Locker;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SequenceArray_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_SequenceArray;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReceivedValueArray_Inner;
@@ -104,6 +117,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Static
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_Cube = { "Cube", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, Cube), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Cube_MetaData), NewProp_Cube_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_Lights = { "Lights", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, Lights), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Lights_MetaData), NewProp_Lights_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, Text), Z_Construct_UClass_UTextRenderComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Text_MetaData), NewProp_Text_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_NumpadMesh = { "NumpadMesh", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, NumpadMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumpadMesh_MetaData), NewProp_NumpadMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_Locker = { "Locker", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, Locker), Z_Construct_UClass_ALocker_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Locker_MetaData), NewProp_Locker_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_SequenceArray_Inner = { "SequenceArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_SequenceArray = { "SequenceArray", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumPad, SequenceArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SequenceArray_MetaData), NewProp_SequenceArray_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANumPad_Statics::NewProp_ReceivedValueArray_Inner = { "ReceivedValueArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
@@ -115,6 +130,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANumPad_S
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_Cube,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_Lights,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_Text,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_NumpadMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_Locker,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_SequenceArray_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_SequenceArray,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumPad_Statics::NewProp_ReceivedValueArray_Inner,
@@ -165,10 +182,10 @@ ANumPad::~ANumPad() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumPad_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANumPad, ANumPad::StaticClass, TEXT("ANumPad"), &Z_Registration_Info_UClass_ANumPad, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANumPad), 343019025U) },
+		{ Z_Construct_UClass_ANumPad, ANumPad::StaticClass, TEXT("ANumPad"), &Z_Registration_Info_UClass_ANumPad, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANumPad), 245625150U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumPad_h_237906990(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumPad_h_2874478879(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumPad_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumPad_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

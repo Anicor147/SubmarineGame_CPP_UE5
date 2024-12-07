@@ -50,6 +50,10 @@ ASubmarineCharacter::ASubmarineCharacter()
 	InspectOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("InspectOrigin"));
 	InspectOrigin->SetupAttachment(FirstPersonCameraComponent);
 	InspectOrigin->SetRelativeLocation(FVector(40.f, 0.f, 0.f)); // Position the camera	
+
+	WeaponOrigin = CreateDefaultSubobject<USceneComponent>(TEXT ("WeaponOrigin"));
+	WeaponOrigin -> SetupAttachment(FirstPersonCameraComponent);
+
 }
 
 void ASubmarineCharacter::BeginPlay()

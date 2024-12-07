@@ -20,10 +20,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Base;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Button;
-
+	USkeletalMeshComponent* Button;
 	
 	UPROPERTY(EditAnywhere, Category = "Sequence")
 	TArray<int> SequenceArray;

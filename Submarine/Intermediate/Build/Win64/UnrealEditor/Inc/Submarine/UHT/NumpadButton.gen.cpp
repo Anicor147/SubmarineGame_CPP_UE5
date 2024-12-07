@@ -47,15 +47,16 @@ struct Z_Construct_UClass_ANumpadButton_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/NumpadButton.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Cube_MetaData[] = {
-		{ "Category", "NumpadButton" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/NumpadButton.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Text_MetaData[] = {
 		{ "Category", "NumpadButton" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* Cube;\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/NumpadButton.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "UPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* Cube;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Numpad_MetaData[] = {
 		{ "Category", "1-Numpad" },
@@ -68,7 +69,6 @@ struct Z_Construct_UClass_ANumpadButton_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Base;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Cube;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Text;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Numpad;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Value;
@@ -82,14 +82,12 @@ struct Z_Construct_UClass_ANumpadButton_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Base = { "Base", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Base), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Base_MetaData), NewProp_Base_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Cube = { "Cube", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Cube), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Cube_MetaData), NewProp_Cube_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Text), Z_Construct_UClass_UTextRenderComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Text_MetaData), NewProp_Text_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Numpad = { "Numpad", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Numpad), Z_Construct_UClass_ANumPad_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Numpad_MetaData), NewProp_Numpad_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANumpadButton_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANumpadButton, Value), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANumpadButton_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Base,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Cube,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Text,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Numpad,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANumpadButton_Statics::NewProp_Value,
@@ -138,10 +136,10 @@ ANumpadButton::~ANumpadButton() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumpadButton_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANumpadButton, ANumpadButton::StaticClass, TEXT("ANumpadButton"), &Z_Registration_Info_UClass_ANumpadButton, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANumpadButton), 1290480735U) },
+		{ Z_Construct_UClass_ANumpadButton, ANumpadButton::StaticClass, TEXT("ANumpadButton"), &Z_Registration_Info_UClass_ANumpadButton, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANumpadButton), 2528593437U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumpadButton_h_3158452062(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumpadButton_h_1370492210(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumpadButton_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_NumpadButton_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -12,7 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeLeverCondition() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition_NoRegister();
@@ -41,11 +41,6 @@ struct Z_Construct_UClass_ALeverCondition_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/LeverCondition.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Base_MetaData[] = {
-		{ "Category", "LeverCondition" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/LeverCondition.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Button_MetaData[] = {
 		{ "Category", "LeverCondition" },
 		{ "EditInline", "true" },
@@ -61,7 +56,6 @@ struct Z_Construct_UClass_ALeverCondition_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Base;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Button;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SequenceArray_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_SequenceArray;
@@ -76,15 +70,13 @@ struct Z_Construct_UClass_ALeverCondition_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_Base = { "Base", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, Base), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Base_MetaData), NewProp_Base_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_Button = { "Button", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, Button), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Button_MetaData), NewProp_Button_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_Button = { "Button", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, Button), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Button_MetaData), NewProp_Button_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_SequenceArray_Inner = { "SequenceArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_SequenceArray = { "SequenceArray", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, SequenceArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SequenceArray_MetaData), NewProp_SequenceArray_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_LeverArray_Inner = { "LeverArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_ALever_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ALeverCondition_Statics::NewProp_LeverArray = { "LeverArray", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALeverCondition, LeverArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LeverArray_MetaData), NewProp_LeverArray_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALeverCondition_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALeverCondition_Statics::NewProp_Root,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALeverCondition_Statics::NewProp_Base,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALeverCondition_Statics::NewProp_Button,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALeverCondition_Statics::NewProp_SequenceArray_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALeverCondition_Statics::NewProp_SequenceArray,
@@ -135,10 +127,10 @@ ALeverCondition::~ALeverCondition() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALeverCondition, ALeverCondition::StaticClass, TEXT("ALeverCondition"), &Z_Registration_Info_UClass_ALeverCondition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALeverCondition), 677718441U) },
+		{ Z_Construct_UClass_ALeverCondition, ALeverCondition::StaticClass, TEXT("ALeverCondition"), &Z_Registration_Info_UClass_ALeverCondition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALeverCondition), 4079917391U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_654899447(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_1775455198(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_LeverCondition_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

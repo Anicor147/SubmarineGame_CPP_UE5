@@ -15,8 +15,8 @@ ANumpadButton::ANumpadButton()
 	Base = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base"));
 	Base->SetupAttachment(RootComponent);
 
-	Cube = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
-	Cube->SetupAttachment(Base);
+	// Cube = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cube"));
+	// Cube->SetupAttachment(Base);
 
 	Text = CreateDefaultSubobject<UTextRenderComponent>(TEXT("Text"));
 	Text->SetupAttachment(RootComponent);

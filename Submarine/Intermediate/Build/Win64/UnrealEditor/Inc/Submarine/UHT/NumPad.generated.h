@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_NumPad_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_NumPad_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_NumPad_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANumPad(); \
 	friend struct Z_Construct_UClass_ANumPad_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ANumPad*>(this); }
 
 
-#define FID_Submarine_Source_Submarine_Private_NumPad_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_NumPad_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ANumPad(ANumPad&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~ANumPad();
 
 
-#define FID_Submarine_Source_Submarine_Private_NumPad_h_14_PROLOG
-#define FID_Submarine_Source_Submarine_Private_NumPad_h_17_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_NumPad_h_15_PROLOG
+#define FID_Submarine_Source_Submarine_Private_NumPad_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_NumPad_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_NumPad_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_NumPad_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_NumPad_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
