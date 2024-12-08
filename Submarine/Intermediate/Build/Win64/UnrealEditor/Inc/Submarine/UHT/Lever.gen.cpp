@@ -44,14 +44,8 @@ struct Z_Construct_UClass_ALever_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skeletal_MetaData[] = {
 		{ "Category", "Lever" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* base;\n// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* cylinder;\n// UPROPERTY(VisibleAnywhere)\n// UStaticMeshComponent* ball;\n" },
-#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "UPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* base;\nUPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* cylinder;\nUPROPERTY(VisibleAnywhere)\nUStaticMeshComponent* ball;" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_condition_MetaData[] = {
 		{ "Category", "Lever Condition" },
@@ -142,10 +136,10 @@ ALever::~ALever() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 824357433U) },
+		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 302452677U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_2075920265(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_844044300(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -2,12 +2,9 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Submarine.cpp.obj": [
-			"Battery.gen.cpp.obj",
 			"Detach.gen.cpp.obj",
-			"Generator.gen.cpp.obj",
 			"Hammer.gen.cpp.obj",
 			"InteractE.gen.cpp.obj",
-			"Interaction.gen.cpp.obj",
 			"Lever.gen.cpp.obj",
 			"LeverAnimNotify.gen.cpp.obj",
 			"LeverCondition.gen.cpp.obj",
@@ -17,7 +14,6 @@
 			"NumpadButton.gen.cpp.obj",
 			"PauseWidget.gen.cpp.obj",
 			"PlayerWidget.gen.cpp.obj",
-			"Submarine.init.gen.cpp.obj",
 			"SubmarineCharacter.gen.cpp.obj",
 			"SubmarineGameMode.gen.cpp.obj",
 			"SubmarinePlayerController.gen.cpp.obj",
@@ -27,12 +23,8 @@
 			"WaterLeak.gen.cpp.obj",
 			"WaterMecanic.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
-			"Battery.cpp.obj",
 			"Detach.cpp.obj",
-			"Generator.cpp.obj",
 			"InteractE.cpp.obj",
-			"Interaction.cpp.obj",
-			"Lever.cpp.obj",
 			"LeverAnimNotify.cpp.obj",
 			"LeverCondition.cpp.obj",
 			"Locker.cpp.obj",
@@ -41,16 +33,20 @@
 			"NumpadButton.cpp.obj",
 			"PauseWidget.cpp.obj",
 			"PlayerWidget.cpp.obj",
+			"WaterLeak.cpp.obj",
 			"WaterMecanic.cpp.obj",
 			"Hammer.cpp.obj",
 			"Submarine.cpp.obj",
-			"SubmarineCharacter.cpp.obj",
 			"SubmarineGameMode.cpp.obj",
 			"SubmarinePlayerController.cpp.obj",
 			"SubmarineProjectile.cpp.obj",
 			"TP_PickUpComponent.cpp.obj",
 			"TP_WeaponComponent.cpp.obj",
-			"WaterLeak.cpp.obj"
+			"Battery.gen.cpp.obj",
+			"Submarine.init.gen.cpp.obj",
+			"Battery.cpp.obj",
+			"Lever.cpp.obj",
+			"SubmarineCharacter.cpp.obj"
 		]
 	}
 }

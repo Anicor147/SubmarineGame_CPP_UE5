@@ -3,21 +3,27 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InteractE.h"
 #include "GameFramework/Actor.h"
 #include "Battery.generated.h"
 
 UCLASS()
-class ABattery : public AActor
+class ABattery : public AActor, public IInteractE
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this actor's properties
 	ABattery();
-	UPROPERTY(VisibleAnywhere)
+
+	UPROPERTY(EditAnywhere)
 	USceneComponent* Root;
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Cube;
+
+	UPROPERTY(EditAnywhere)
+	USkeletalMeshComponent* BatteryMesh;
+
+private:
+	APlayerController* Player;
 
 protected:
 	// Called when the game starts or when spawned
@@ -26,4 +32,5 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual void Interact() override;
 };

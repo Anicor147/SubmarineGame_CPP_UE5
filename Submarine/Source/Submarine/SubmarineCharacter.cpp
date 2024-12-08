@@ -17,7 +17,6 @@
 #include "Engine/LocalPlayer.h"
 #include "Private/PlayerWidget.h"
 #include "Private/Lever.h"
-#include "Private/Interaction.h"
 #include "Private/InteractE.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -119,16 +118,7 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 
 				PlayerWidget->SetPromptF(true);
 			}
-
-			//Preparation pour les vis du generateur
-			if (Hit.GetActor()->Implements<UInteraction>())
-			{
-				if (IInteraction* InteractionActor = Cast<IInteraction>(Hit.GetActor()))
-				{
-					InteractionActor->Interact(Hit);
-					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("As Interface"));
-				}
-			}
+		
 		}
 		else
 		{

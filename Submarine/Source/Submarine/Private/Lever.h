@@ -22,12 +22,7 @@ public:
 	ALever();
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
-	// UPROPERTY(VisibleAnywhere)
-	// UStaticMeshComponent* base;
-	// UPROPERTY(VisibleAnywhere)
-	// UStaticMeshComponent* cylinder;
-	// UPROPERTY(VisibleAnywhere)
-	// UStaticMeshComponent* ball;
+	
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* skeletal;
 

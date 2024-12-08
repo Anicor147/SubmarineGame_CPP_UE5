@@ -82,34 +82,16 @@
     <Filter Include="Source\Submarine\Private">
       <UniqueIdentifier>{4748C48E-C6F2-3F49-8867-2C90B86A6857}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Submarine\Private\Battery.cpp">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Submarine\Private\Battery.h">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Detach.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Detach.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Submarine\Private\Generator.cpp">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Submarine\Private\Generator.h">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\InteractE.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\InteractE.h">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Submarine\Private\Interaction.cpp">
-      <Filter>Source\Submarine\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Submarine\Private\Interaction.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Lever.cpp">
@@ -171,6 +153,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.h">
       <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Submarine\Private\GeneratorScripts">
+      <UniqueIdentifier>{937CFBFE-2698-3514-8D10-EE77C19A3C90}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Submarine\Private\GeneratorScripts\Battery.cpp">
+      <Filter>Source\Submarine\Private\GeneratorScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\GeneratorScripts\Battery.h">
+      <Filter>Source\Submarine\Private\GeneratorScripts</Filter>
     </ClCompile>
     <Filter Include="Source\Submarine\Private\WaterLeak">
       <UniqueIdentifier>{88C9FD64-EB9E-3838-A0B1-36F4E9059541}</UniqueIdentifier>
