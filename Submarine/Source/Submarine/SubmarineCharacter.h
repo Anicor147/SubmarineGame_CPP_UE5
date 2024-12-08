@@ -52,18 +52,19 @@ class ASubmarineCharacter : public ACharacter
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USceneComponent* WeaponOrigin;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputMappingContext* DefaultMappingContext;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputMappingContext* InspectMappingContext;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* InteractAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* PauseAction;
+
 public:
 	ASubmarineCharacter();
 
@@ -91,6 +92,7 @@ protected:
 	void RotateInspect(const FInputActionValue& Value);
 	void InteractWithObject();
 	void PauseGameAction();
+
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
@@ -102,12 +104,19 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 	USceneComponent* GetWeaponOrigin() const { return WeaponOrigin; }
+	bool GetAsHammer() const { return AsHammer; }
+
+	bool SetAsHammer(bool Value)
+	{
+		AsHammer = Value;
+		return AsHammer;
+	}
+
 private:
 	class UPlayerWidget* PlayerWidget;
 	class UPauseWidget* PauseWidget;
-	
 
-	
+
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> PlayerWidgetClass;
 
@@ -115,9 +124,10 @@ private:
 	TSubclassOf<UUserWidget> PauseWidgetClass;
 
 	bool IsInspecting;
+	bool AsHammer;
 	AActor* CurrentInspectActor;
 	AActor* InteractActor;
-		
+
 	FTransform InitialInspectTransform;
-	FVector InitialSize;	
+	FVector InitialSize;
 };

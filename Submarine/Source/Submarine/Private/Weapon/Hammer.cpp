@@ -43,9 +43,9 @@ void AHammer::Interact()
 				USceneComponent* WeaponOrigin = SubmarineCharacter->GetWeaponOrigin();
 				if (WeaponOrigin)
 				{
-					
 					AttachToComponent(WeaponOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-					FRotator CurrentRotation = WeaponOrigin->GetComponentRotation();
+					// FRotator CurrentRotation = WeaponOrigin->GetComponentRotation();
+					SubmarineCharacter ->SetAsHammer(true);
 				}
 			}
 		}

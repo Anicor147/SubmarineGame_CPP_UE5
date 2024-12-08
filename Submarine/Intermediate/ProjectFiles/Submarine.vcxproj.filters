@@ -172,6 +172,15 @@
     <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\Submarine\Private\WaterLeak">
+      <UniqueIdentifier>{88C9FD64-EB9E-3838-A0B1-36F4E9059541}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Submarine\Private\WaterLeak\WaterLeak.cpp">
+      <Filter>Source\Submarine\Private\WaterLeak</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\WaterLeak\WaterLeak.h">
+      <Filter>Source\Submarine\Private\WaterLeak</Filter>
+    </ClCompile>
     <Filter Include="Source\Submarine\Private\Weapon">
       <UniqueIdentifier>{4292F469-C1B2-3C6D-9EFF-4B650FF532D0}</UniqueIdentifier>
     </Filter>
