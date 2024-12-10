@@ -14,6 +14,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_PauseWidget_generated_h
 
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnResumeButton);
+
+
 #define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPauseWidget(); \
@@ -41,6 +45,7 @@ public: \
 #define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_ENHANCED_CONSTRUCTORS \
 private: \

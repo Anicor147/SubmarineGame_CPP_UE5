@@ -14,6 +14,16 @@ class UPauseWidget : public UUserWidget
 {
 	GENERATED_BODY()
 
+protected:
+	virtual void NativeConstruct() override;
+
+	UFUNCTION()
+	void OnResumeButton();
+
 public:
 	virtual void PauseGame();
+
+
+	UPROPERTY(meta = (BindWidget))
+	class UButton* ResumeButton;
 };

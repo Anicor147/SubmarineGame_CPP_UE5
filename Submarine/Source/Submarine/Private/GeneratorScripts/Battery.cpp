@@ -47,17 +47,14 @@ void ABattery::Interact()
 				UE_LOG(LogTemp, Warning, TEXT("Cast Fonctionnel"));
 				USceneComponent* WeaponOrigin = SubmarineCharacter->GetWeaponOrigin();
 
-				if (BatteryMesh)
-				{
 					BatteryMesh->SetSimulatePhysics(false);
 					BatteryMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 				    BatteryMesh->SetWorldLocation(WeaponOrigin->GetComponentLocation());
-				}
 				if (WeaponOrigin)
 				{
+					AttachToComponent(WeaponOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 					FTransform AttachTransform = FTransform(WeaponOrigin->GetComponentRotation(), WeaponOrigin->GetComponentLocation(), BatteryMesh->GetComponentScale());
 					BatteryMesh->SetWorldTransform(AttachTransform);
-					AttachToComponent(WeaponOrigin, FAttachmentTransformRules::KeepWorldTransform);
 					SubmarineCharacter->SetBattery(this);
 					SubmarineCharacter->SetAsBattery(true);
 					 SubmarineCharacter->HeldItem = this;
