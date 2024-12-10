@@ -9,6 +9,8 @@ void UPauseWidget::PauseGame()
 {
 	if (IsValid(this))
 	{
+		APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
+
 		if (this->IsVisible())
 		{
 			this->SetVisibility(ESlateVisibility::Hidden);
@@ -19,6 +21,8 @@ void UPauseWidget::PauseGame()
 			
 			this->SetVisibility(ESlateVisibility::Visible);
 			UGameplayStatics::SetGamePaused(GetWorld(), true);
+			PlayerController ->bShowMouseCursor = true;
+			PlayerController->SetInputMode(FInputModeUIOnly());
 		}
 	}
 	else

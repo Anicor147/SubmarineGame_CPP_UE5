@@ -163,6 +163,12 @@
     <ClCompile Include="..\..\Source\Submarine\Private\GeneratorScripts\Battery.h">
       <Filter>Source\Submarine\Private\GeneratorScripts</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\GeneratorScripts\Generator.cpp">
+      <Filter>Source\Submarine\Private\GeneratorScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\GeneratorScripts\Generator.h">
+      <Filter>Source\Submarine\Private\GeneratorScripts</Filter>
+    </ClCompile>
     <Filter Include="Source\Submarine\Private\WaterLeak">
       <UniqueIdentifier>{88C9FD64-EB9E-3838-A0B1-36F4E9059541}</UniqueIdentifier>
     </Filter>

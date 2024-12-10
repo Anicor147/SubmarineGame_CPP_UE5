@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_Battery_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABattery(); \
 	friend struct Z_Construct_UClass_ABattery_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ABattery*>(this); }
 
 
-#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABattery(ABattery&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~ABattery();
 
 
-#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_10_PROLOG
-#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_13_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_11_PROLOG
+#define FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

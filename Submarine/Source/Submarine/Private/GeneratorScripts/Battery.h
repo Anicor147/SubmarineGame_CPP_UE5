@@ -3,12 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "DropItems.h"
 #include "InteractE.h"
 #include "GameFramework/Actor.h"
 #include "Battery.generated.h"
 
 UCLASS()
-class ABattery : public AActor, public IInteractE
+class ABattery : public AActor, public IInteractE , public IDropItems
 {
 	GENERATED_BODY()
 
@@ -20,7 +21,7 @@ public:
 	USceneComponent* Root;
 
 	UPROPERTY(EditAnywhere)
-	USkeletalMeshComponent* BatteryMesh;
+	UStaticMeshComponent* BatteryMesh;
 
 private:
 	APlayerController* Player;
@@ -33,4 +34,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void Interact() override;
+	virtual void Detach();
+	virtual void DropItems() override;
 };

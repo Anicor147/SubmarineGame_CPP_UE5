@@ -47,6 +47,7 @@ public:
 	virtual void ActivateLever();
 	virtual void ResetLever();
 	virtual void Interact() override;
+	
 private:
 	void InitAnimations();
 	void InteractMontage();

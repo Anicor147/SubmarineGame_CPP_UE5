@@ -12,9 +12,10 @@ void EmptyLinkFunctionForGeneratedCodeBattery() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ABattery();
 SUBMARINE_API UClass* Z_Construct_UClass_ABattery_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_UDropItems_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
@@ -57,7 +58,7 @@ struct Z_Construct_UClass_ABattery_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABattery_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABattery, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABattery_Statics::NewProp_BatteryMesh = { "BatteryMesh", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABattery, BatteryMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BatteryMesh_MetaData), NewProp_BatteryMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABattery_Statics::NewProp_BatteryMesh = { "BatteryMesh", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABattery, BatteryMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BatteryMesh_MetaData), NewProp_BatteryMesh_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABattery_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABattery_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABattery_Statics::NewProp_BatteryMesh,
@@ -70,6 +71,7 @@ UObject* (*const Z_Construct_UClass_ABattery_Statics::DependentSingletons[])() =
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABattery_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABattery_Statics::InterfaceParams[] = {
 	{ Z_Construct_UClass_UInteractE_NoRegister, (int32)VTABLE_OFFSET(ABattery, IInteractE), false },  // 180728773
+	{ Z_Construct_UClass_UDropItems_NoRegister, (int32)VTABLE_OFFSET(ABattery, IDropItems), false },  // 4134935668
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ABattery_Statics::ClassParams = {
 	&ABattery::StaticClass,
@@ -106,10 +108,10 @@ ABattery::~ABattery() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABattery, ABattery::StaticClass, TEXT("ABattery"), &Z_Registration_Info_UClass_ABattery, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABattery), 3682405466U) },
+		{ Z_Construct_UClass_ABattery, ABattery::StaticClass, TEXT("ABattery"), &Z_Registration_Info_UClass_ABattery, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABattery), 182546618U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_2397321034(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_2780121866(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Battery_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

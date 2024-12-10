@@ -11,8 +11,8 @@ AHammer::AHammer()
 	Root = CreateDefaultSubobject<USceneComponent>("Root");
 	RootComponent = Root;
 
-	SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Mesh");
-	SkeletalMesh->SetupAttachment(Root);
+	Hammer = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
+	Hammer->SetupAttachment(Root);
 }
 
 // Called when the game starts or when spawned
@@ -20,6 +20,7 @@ void AHammer::BeginPlay()
 {
 	Super::BeginPlay();
 
+	Rotation = GetActorRotation();
 	Player = GetWorld()->GetFirstPlayerController();
 }
 
@@ -38,16 +39,50 @@ void AHammer::Interact()
 		if (PlayerPawn)
 		{
 			auto SubmarineCharacter = Cast<ASubmarineCharacter>(PlayerPawn);
-			if (SubmarineCharacter)
+			if (SubmarineCharacter && SubmarineCharacter->HeldItem == nullptr)
 			{
 				USceneComponent* WeaponOrigin = SubmarineCharacter->GetWeaponOrigin();
-				if (WeaponOrigin)
+				if (WeaponOrigin && Hammer)
 				{
-					AttachToComponent(WeaponOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-					// FRotator CurrentRotation = WeaponOrigin->GetComponentRotation();
-					SubmarineCharacter ->SetAsHammer(true);
+					Hammer->SetSimulatePhysics(false);
+					Hammer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+					this->AttachToComponent(WeaponOrigin, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+					// this->AttachToComponent(WeaponOrigin, FAttachmentTransformRules::KeepRelativeTransform);
+
+					this->SetActorLocation(WeaponOrigin->GetComponentLocation());
+
+					FTransform AttachTransform = FTransform(WeaponOrigin->GetComponentRotation(), WeaponOrigin->GetComponentLocation(), Hammer->GetComponentScale());
+					// Hammer->SetRelativeRotation(Rotation);
+					Hammer -> SetWorldTransform(AttachTransform);
+					Hammer->SetWorldLocation(WeaponOrigin->GetComponentLocation());
+					SubmarineCharacter->SetAsHammer(true);
+					SubmarineCharacter->HeldItem = this;
 				}
 			}
+		}
+	}
+}
+
+
+void AHammer::DropItems()
+{
+	if (Hammer)
+	{
+		Hammer->SetSimulatePhysics(true);
+		Hammer->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	}
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+
+	if (Player)
+	{
+		APawn* PlayerPawn = Player->GetPawn();
+		auto SubmarineCharacter = Cast<ASubmarineCharacter>(PlayerPawn);
+		if (SubmarineCharacter)
+		{
+			SubmarineCharacter->HeldItem = nullptr;
+			UE_LOG(LogTemp, Warning, TEXT("HeldItem has been cleared. The character is no longer holding any item."));
+			SubmarineCharacter->SetAsHammer(false);
 		}
 	}
 }

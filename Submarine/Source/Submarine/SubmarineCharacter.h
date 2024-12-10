@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "GeneratorScripts/Battery.h"
+#include "DropItems.h"
 #include "SubmarineCharacter.generated.h"
 
 class UInputComponent;
@@ -12,6 +14,7 @@ class USkeletalMeshComponent;
 class UCameraComponent;
 class UInputAction;
 class UInputMappingContext;
+
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -65,6 +68,9 @@ class ASubmarineCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* PauseAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* DropAction;
+
 public:
 	ASubmarineCharacter();
 
@@ -92,6 +98,7 @@ protected:
 	void RotateInspect(const FInputActionValue& Value);
 	void InteractWithObject();
 	void PauseGameAction();
+	void DropObjectAction();
 
 protected:
 	// APawn interface
@@ -106,11 +113,20 @@ public:
 	USceneComponent* GetWeaponOrigin() const { return WeaponOrigin; }
 	bool GetAsHammer() const { return AsHammer; }
 
-	bool SetAsHammer(bool Value)
+	void SetAsHammer(const bool Value)
 	{
 		AsHammer = Value;
-		return AsHammer;
 	}
+
+	bool GetAsBattery() { return AsBattery; }
+	void SetAsBattery(const bool Value) { AsBattery = Value; }
+
+
+	ABattery* GetBattery() { return Battery; }
+	void SetBattery(ABattery* Value) { Battery = Value; }
+
+
+	 IDropItems* HeldItem;
 
 private:
 	class UPlayerWidget* PlayerWidget;
@@ -125,9 +141,11 @@ private:
 
 	bool IsInspecting;
 	bool AsHammer;
+	bool AsBattery;
 	AActor* CurrentInspectActor;
 	AActor* InteractActor;
 
 	FTransform InitialInspectTransform;
 	FVector InitialSize;
+	ABattery* Battery;
 };

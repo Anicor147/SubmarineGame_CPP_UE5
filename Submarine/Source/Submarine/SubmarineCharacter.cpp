@@ -50,9 +50,8 @@ ASubmarineCharacter::ASubmarineCharacter()
 	InspectOrigin->SetupAttachment(FirstPersonCameraComponent);
 	InspectOrigin->SetRelativeLocation(FVector(40.f, 0.f, 0.f)); // Position the camera	
 
-	WeaponOrigin = CreateDefaultSubobject<USceneComponent>(TEXT ("WeaponOrigin"));
-	WeaponOrigin -> SetupAttachment(FirstPersonCameraComponent);
-
+	WeaponOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("WeaponOrigin"));
+	WeaponOrigin->SetupAttachment(FirstPersonCameraComponent);
 }
 
 void ASubmarineCharacter::BeginPlay()
@@ -118,7 +117,6 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 
 				PlayerWidget->SetPromptF(true);
 			}
-		
 		}
 		else
 		{
@@ -159,6 +157,9 @@ void ASubmarineCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 		EnhancedInputComponent->BindAction(PauseAction, ETriggerEvent::Triggered, this,
 		                                   &ASubmarineCharacter::PauseGameAction);
+
+		EnhancedInputComponent->BindAction(DropAction, ETriggerEvent::Triggered, this,
+		                                   &ASubmarineCharacter::DropObjectAction);
 	}
 	else
 	{
@@ -248,7 +249,7 @@ void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 	if (IsInspecting && CurrentInspectActor)
 	{
 		FVector2D RotateInput = Value.Get<FVector2D>();
-		FRotator NewRotation = FRotator(RotateInput.Y, RotateInput.X * 5.f, 0.f);
+		FRotator NewRotation = FRotator(RotateInput.Y, RotateInput.X * 1.f, 0.f);
 		CurrentInspectActor->AddActorLocalRotation(NewRotation);
 	}
 
@@ -272,5 +273,13 @@ void ASubmarineCharacter::PauseGameAction()
 	if (PauseWidget)
 	{
 		PauseWidget->PauseGame();
+	}
+}
+
+void ASubmarineCharacter::DropObjectAction()
+{
+	if (HeldItem != nullptr)
+	{
+	 HeldItem->DropItems();
 	}
 }

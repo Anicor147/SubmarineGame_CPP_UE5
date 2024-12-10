@@ -82,11 +82,7 @@ void ALever::InteractMontage()
 	UAnimInstance* AnimInstance = skeletal->GetAnimInstance();
 	if (AnimInstance && AnimInstance->GetCurrentActiveMontage())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Montage is active, pausing..."));
 		AnimInstance->Montage_Pause(AnimInstance->GetCurrentActiveMontage());
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("No active montage to pause!"));
-	}
+
 }
