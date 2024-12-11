@@ -1,7 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SubmarineCharacter.h"
-#include "SubmarineProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,14 +8,12 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
-#include "LeverCondition.h"
+#include "MainMenuWidget.h"
 #include "PauseWidget.h"
 #include "PlayerWidget.h"
 #include "Blueprint/UserWidget.h"
-#include "Components/BoxComponent.h"
 #include "Engine/LocalPlayer.h"
-#include "Private/PlayerWidget.h"
-#include "Private/Lever.h"
+#include "Kismet/GameplayStatics.h"
 #include "Private/InteractE.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -81,6 +78,20 @@ void ASubmarineCharacter::BeginPlay()
 		{
 			PauseWidget->AddToViewport();
 			PauseWidget->SetVisibility(ESlateVisibility::Hidden);
+		}
+	}
+	FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
+	if (MainMenuWidgetClass && CurrentLevelName=="MainMenu" )
+	{
+		auto UserMainMenuWidget = CreateWidget<UUserWidget>(GetWorld(), MainMenuWidgetClass); 
+		if (UserMainMenuWidget)
+		{
+			MainMenuWidget = Cast<UMainMenuWidget>(UserMainMenuWidget);
+			if (MainMenuWidget)
+			{
+				MainMenuWidget->AddToViewport();
+				MainMenuWidget->SetVisibility(ESlateVisibility::Visible);
+			}
 		}
 	}
 }
@@ -208,7 +219,7 @@ void ASubmarineCharacter::Look(const FInputActionValue& Value)
 	if (Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
-		AddControllerYawInput(LookAxisVector.X* SensitivityValue);
+		AddControllerYawInput(LookAxisVector.X * SensitivityValue);
 		AddControllerPitchInput(LookAxisVector.Y * SensitivityValue);
 	}
 }

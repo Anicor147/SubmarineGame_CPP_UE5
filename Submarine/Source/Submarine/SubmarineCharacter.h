@@ -131,9 +131,10 @@ public:
 
 	class UPlayerWidget* PlayerWidget;
 
+	class UMainMenuWidget* MainMenuWidget;
+
 private:
 	class UPauseWidget* PauseWidget;
-
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> PlayerWidgetClass;
@@ -141,6 +142,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> PauseWidgetClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> MainMenuWidgetClass;
+
+
+	
 	UPROPERTY(EditAnywhere)
 	float maxDistance = 600.f;
 	bool IsInspecting;

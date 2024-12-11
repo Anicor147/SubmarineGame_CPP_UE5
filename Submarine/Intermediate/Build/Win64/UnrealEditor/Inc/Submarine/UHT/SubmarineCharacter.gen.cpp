@@ -175,6 +175,10 @@ struct Z_Construct_UClass_ASubmarineCharacter_Statics
 		{ "Category", "SubmarineCharacter" },
 		{ "ModuleRelativePath", "SubmarineCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidgetClass_MetaData[] = {
+		{ "Category", "SubmarineCharacter" },
+		{ "ModuleRelativePath", "SubmarineCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_maxDistance_MetaData[] = {
 		{ "Category", "SubmarineCharacter" },
 		{ "ModuleRelativePath", "SubmarineCharacter.h" },
@@ -198,6 +202,7 @@ struct Z_Construct_UClass_ASubmarineCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RotateInspectAction;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_PlayerWidgetClass;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_PauseWidgetClass;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_MainMenuWidgetClass;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_maxDistance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -224,6 +229,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineChar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_RotateInspectAction = { "RotateInspectAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, RotateInspectAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotateInspectAction_MetaData), NewProp_RotateInspectAction_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_PlayerWidgetClass = { "PlayerWidgetClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, PlayerWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerWidgetClass_MetaData), NewProp_PlayerWidgetClass_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_PauseWidgetClass = { "PauseWidgetClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, PauseWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PauseWidgetClass_MetaData), NewProp_PauseWidgetClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_MainMenuWidgetClass = { "MainMenuWidgetClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, MainMenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetClass_MetaData), NewProp_MainMenuWidgetClass_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_maxDistance = { "maxDistance", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASubmarineCharacter, maxDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_maxDistance_MetaData), NewProp_maxDistance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASubmarineCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_InvisibleBody,
@@ -244,6 +250,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASubmarin
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_RotateInspectAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_PlayerWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_PauseWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_MainMenuWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubmarineCharacter_Statics::NewProp_maxDistance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASubmarineCharacter_Statics::PropPointers) < 2048);
@@ -287,10 +294,10 @@ ASubmarineCharacter::~ASubmarineCharacter() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 1506987900U) },
+		{ Z_Construct_UClass_ASubmarineCharacter, ASubmarineCharacter::StaticClass, TEXT("ASubmarineCharacter"), &Z_Registration_Info_UClass_ASubmarineCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASubmarineCharacter), 1060077469U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_58163213(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_1726648826(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_SubmarineCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
