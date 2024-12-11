@@ -20,4 +20,7 @@ public :
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void SetPromptE(bool Visible);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetPromptG(bool Visible);
 };

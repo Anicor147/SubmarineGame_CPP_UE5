@@ -16,6 +16,7 @@ ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_AWaterLeak();
 SUBMARINE_API UClass* Z_Construct_UClass_AWaterLeak_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_AWaterMecanic_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
@@ -51,10 +52,15 @@ struct Z_Construct_UClass_AWaterLeak_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/WaterLeak/WaterLeak.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WaterMecanic_MetaData[] = {
+		{ "Category", "WaterLeak" },
+		{ "ModuleRelativePath", "Private/WaterLeak/WaterLeak.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Patch;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WaterLeak;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WaterMecanic;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -66,10 +72,12 @@ struct Z_Construct_UClass_AWaterLeak_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterLeak_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterLeak, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterLeak_Statics::NewProp_Patch = { "Patch", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterLeak, Patch), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Patch_MetaData), NewProp_Patch_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterLeak_Statics::NewProp_WaterLeak = { "WaterLeak", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterLeak, WaterLeak), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterLeak_MetaData), NewProp_WaterLeak_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaterLeak_Statics::NewProp_WaterMecanic = { "WaterMecanic", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaterLeak, WaterMecanic), Z_Construct_UClass_AWaterMecanic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterMecanic_MetaData), NewProp_WaterMecanic_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWaterLeak_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterLeak_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterLeak_Statics::NewProp_Patch,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterLeak_Statics::NewProp_WaterLeak,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaterLeak_Statics::NewProp_WaterMecanic,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWaterLeak_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWaterLeak_Statics::DependentSingletons[])() = {
@@ -115,10 +123,10 @@ AWaterLeak::~AWaterLeak() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterLeak_WaterLeak_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWaterLeak, AWaterLeak::StaticClass, TEXT("AWaterLeak"), &Z_Registration_Info_UClass_AWaterLeak, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterLeak), 3131434704U) },
+		{ Z_Construct_UClass_AWaterLeak, AWaterLeak::StaticClass, TEXT("AWaterLeak"), &Z_Registration_Info_UClass_AWaterLeak, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaterLeak), 204998351U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterLeak_WaterLeak_h_2769309721(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterLeak_WaterLeak_h_1130427639(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterLeak_WaterLeak_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_WaterLeak_WaterLeak_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

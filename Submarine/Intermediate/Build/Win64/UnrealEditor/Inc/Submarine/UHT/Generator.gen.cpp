@@ -15,6 +15,7 @@ ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_AGenerator();
 SUBMARINE_API UClass* Z_Construct_UClass_AGenerator_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_AWaterMecanic_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
@@ -60,12 +61,17 @@ struct Z_Construct_UClass_AGenerator_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/GeneratorScripts/Generator.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Water_MetaData[] = {
+		{ "Category", "Generator" },
+		{ "ModuleRelativePath", "Private/GeneratorScripts/Generator.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Slot1;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Slot2;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Slot3;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Water;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -79,12 +85,14 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGenerator_Sta
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGenerator_Statics::NewProp_Slot2 = { "Slot2", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGenerator, Slot2), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Slot2_MetaData), NewProp_Slot2_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGenerator_Statics::NewProp_Slot3 = { "Slot3", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGenerator, Slot3), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Slot3_MetaData), NewProp_Slot3_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGenerator_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGenerator, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGenerator_Statics::NewProp_Water = { "Water", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGenerator, Water), Z_Construct_UClass_AWaterMecanic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Water_MetaData), NewProp_Water_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGenerator_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Slot1,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Slot2,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Slot3,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Mesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGenerator_Statics::NewProp_Water,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGenerator_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AGenerator_Statics::DependentSingletons[])() = {
@@ -130,10 +138,10 @@ AGenerator::~AGenerator() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Generator_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGenerator, AGenerator::StaticClass, TEXT("AGenerator"), &Z_Registration_Info_UClass_AGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGenerator), 2764162506U) },
+		{ Z_Construct_UClass_AGenerator, AGenerator::StaticClass, TEXT("AGenerator"), &Z_Registration_Info_UClass_AGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGenerator), 2604096814U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Generator_h_1036042786(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Generator_h_3902802535(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Generator_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_GeneratorScripts_Generator_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

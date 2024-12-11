@@ -88,6 +88,12 @@
     <ClCompile Include="..\..\Source\Submarine\Private\Detach.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\DropItems.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\DropItems.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\InteractE.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
@@ -116,6 +122,12 @@
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Locker.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\LockerLock.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\LockerLock.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\NPCCharacter.cpp">
@@ -185,6 +197,12 @@
       <Filter>Source\Submarine\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Weapon\Hammer.h">
+      <Filter>Source\Submarine\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Weapon\Toolbox.cpp">
+      <Filter>Source\Submarine\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\Weapon\Toolbox.h">
       <Filter>Source\Submarine\Private\Weapon</Filter>
     </ClCompile>
   </ItemGroup>

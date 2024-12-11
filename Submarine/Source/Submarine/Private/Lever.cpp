@@ -43,21 +43,24 @@ void ALever::ActivateLever()
 void ALever::ResetLever()
 {
 	doOnce = false;
-	auto instance = skeletal ->GetAnimInstance();
-	instance ->Montage_Stop(0.0f,instance->GetCurrentActiveMontage());
+	auto instance = skeletal->GetAnimInstance();
+	instance->Montage_Stop(0.0f, instance->GetCurrentActiveMontage());
 }
 
 void ALever::Interact()
 {
-	if (!doOnce)
+	if (WaterMecanic->GetGeneratorIsFix() && WaterMecanic->GetWaterLeaksFixed())
 	{
-		UAnimInstance* AnimInstance = skeletal->GetAnimInstance();
-		if (AnimInstance && !AnimInstance->Montage_IsPlaying(DesactionnerMontage))
+		if (!doOnce)
 		{
-			AnimInstance->Montage_Stop(0.0f,AnimInstance->GetCurrentActiveMontage());
-			condition->CheckSequence(value);
-			AnimInstance->Montage_Play(DesactionnerMontage, 1.0f);
-			doOnce = true;
+			UAnimInstance* AnimInstance = skeletal->GetAnimInstance();
+			if (AnimInstance && !AnimInstance->Montage_IsPlaying(DesactionnerMontage))
+			{
+				AnimInstance->Montage_Stop(0.0f, AnimInstance->GetCurrentActiveMontage());
+				condition->CheckSequence(value);
+				AnimInstance->Montage_Play(DesactionnerMontage, 1.0f);
+				doOnce = true;
+			}
 		}
 	}
 }
@@ -84,5 +87,4 @@ void ALever::InteractMontage()
 	{
 		AnimInstance->Montage_Pause(AnimInstance->GetCurrentActiveMontage());
 	}
-
 }

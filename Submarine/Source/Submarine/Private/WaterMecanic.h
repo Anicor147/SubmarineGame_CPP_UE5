@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "GeneratorScripts/Generator.h"
+#include "WaterLeak/WaterLeak.h"
 #include "WaterMecanic.generated.h"
 
 UCLASS()
@@ -22,26 +24,38 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Plane;
-	
-	 UPROPERTY(VisibleAnywhere)
-	 UNiagaraComponent* WaterComponent;
 
+	UPROPERTY(VisibleAnywhere)
+	UNiagaraComponent* WaterComponent;
+
+	bool GetWaterLeaksFixed() const { return WaterLeaksPatched; }
+	bool GetGeneratorIsFix()const { return GeneratorPatched; }
 private:
-	 float Timer;
+	float Timer;
+	int PatchedLeak;
+	int RepairedGenerator;
 
+	UPROPERTY(EditAnywhere)
+	TArray<AWaterLeak*> WaterLeaks;
 	
+	UPROPERTY(EditAnywhere)
+	TArray<AGenerator*> Generators;
+	bool WaterLeaksPatched = false;
+	bool GeneratorPatched = false;
+	bool PlayerIsDrown = false;
 public:
 	UPROPERTY(EditAnywhere)
 	float waterSpeed;
+
+	void DecreasePatchedLeak() { PatchedLeak++; }
+	void GeneratorsFixed() { RepairedGenerator++; }
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void WaterLevel(float DeltaTime);
-	
+	virtual void DrainWater(float DeltaTime);
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
-	
-
 };

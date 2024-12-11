@@ -3,6 +3,8 @@
 
 #include "WaterLeak/WaterLeak.h"
 
+#include "WaterMecanic.h"
+
 
 // Sets default values
 AWaterLeak::AWaterLeak()
@@ -29,7 +31,7 @@ void AWaterLeak::BeginPlay()
 	const auto PlayerController = GetWorld()->GetFirstPlayerController();
 	if (PlayerController)
 	{
-		Player = Cast<ASubmarineCharacter>(PlayerController ->GetPawn());
+		Player = Cast<ASubmarineCharacter>(PlayerController->GetPawn());
 	}
 	Patch->SetHiddenInGame(true);
 }
@@ -44,11 +46,15 @@ void AWaterLeak::Interact()
 {
 	if (Player)
 	{
-		if (Player ->GetAsHammer())
+		if (Player->GetAsHammer() && Player ->GetAsToolBox() )
 		{
-			Patch ->SetHiddenInGame(false);
-			WaterLeak ->Deactivate();
+			Patch->SetHiddenInGame(false);
+			WaterLeak->Deactivate();
+			if (!DoOnce)
+			{
+				WaterMecanic->DecreasePatchedLeak();
+				DoOnce = true;
+			}
 		}
 	}
 }
-

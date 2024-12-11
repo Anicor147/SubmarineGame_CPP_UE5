@@ -4,6 +4,7 @@
 #include "GeneratorScripts/Generator.h"
 
 #include "Battery.h"
+#include "WaterMecanic.h"
 #include "Submarine/SubmarineCharacter.h"
 
 // Sets default values
@@ -77,6 +78,12 @@ void AGenerator::Interact()
 						Slot1AsBattery = true;
 						PlayerCharacter->HeldItem = nullptr;
 						Index++;
+						
+						if (Index >= SlotArray.Num())
+						{
+							Water -> GeneratorsFixed();
+							UE_LOG(LogTemp, Warning, TEXT("Generator is online"));
+						}
 					}
 				}
 			}

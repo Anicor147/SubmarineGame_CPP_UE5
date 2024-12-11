@@ -101,21 +101,37 @@ void ASubmarineCharacter::Tick(float DeltaTime)
 		QueryParams.AddIgnoredActor(this);
 
 
+		FVector PlayerLocation = GetActorLocation();
+		// FVector Direction = (End - Start).GetSafeNormal();
+
+
 		if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, ObjectQueryParams, QueryParams) && IsValid(
 			Hit.GetActor()))
 		{
-			if (Hit.GetActor()->Implements<UInteractE>())
-			{
-				InteractActor = Hit.GetActor();
+			float DistanceToActor = FVector::Dist(PlayerLocation, Hit.GetActor()->GetActorLocation());
 
-				PlayerWidget->SetPromptE(true);
+			if (DistanceToActor < maxDistance)
+			{
+				if (Hit.GetActor()->Implements<UInteractE>())
+				{
+					InteractActor = Hit.GetActor();
+
+					PlayerWidget->SetPromptE(true);
+				}
+
+				if (Hit.GetActor()->ActorHasTag("Inspect"))
+				{
+					CurrentInspectActor = Hit.GetActor();
+
+					PlayerWidget->SetPromptF(true);
+				}
 			}
-
-			if (Hit.GetActor()->ActorHasTag("Inspect"))
+			else
 			{
-				CurrentInspectActor = Hit.GetActor();
-
-				PlayerWidget->SetPromptF(true);
+				InteractActor = nullptr;
+				CurrentInspectActor = nullptr;
+				PlayerWidget->SetPromptF(false);
+				PlayerWidget->SetPromptE(false);
 			}
 		}
 		else
@@ -249,7 +265,7 @@ void ASubmarineCharacter::RotateInspect(const FInputActionValue& Value)
 	if (IsInspecting && CurrentInspectActor)
 	{
 		FVector2D RotateInput = Value.Get<FVector2D>();
-		FRotator NewRotation = FRotator(RotateInput.Y, RotateInput.X * 1.f, 0.f);
+		FRotator NewRotation = FRotator(RotateInput.Y * 0.5f, RotateInput.X * 0.5f, 0.f);
 		CurrentInspectActor->AddActorLocalRotation(NewRotation);
 	}
 
@@ -280,6 +296,6 @@ void ASubmarineCharacter::DropObjectAction()
 {
 	if (HeldItem != nullptr)
 	{
-	 HeldItem->DropItems();
+		HeldItem->DropItems();
 	}
 }

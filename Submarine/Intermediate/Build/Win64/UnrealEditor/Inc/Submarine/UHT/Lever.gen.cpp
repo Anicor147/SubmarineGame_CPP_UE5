@@ -17,6 +17,7 @@ ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever();
 SUBMARINE_API UClass* Z_Construct_UClass_ALever_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_ALeverCondition_NoRegister();
+SUBMARINE_API UClass* Z_Construct_UClass_AWaterMecanic_NoRegister();
 SUBMARINE_API UClass* Z_Construct_UClass_UInteractE_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
@@ -59,6 +60,10 @@ struct Z_Construct_UClass_ALever_Statics
 		{ "Category", "Lever Montage" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WaterMecanic_MetaData[] = {
+		{ "Category", "Lever" },
+		{ "ModuleRelativePath", "Private/Lever.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_value_MetaData[] = {
 		{ "Category", "Lever" },
 		{ "ModuleRelativePath", "Private/Lever.h" },
@@ -69,6 +74,7 @@ struct Z_Construct_UClass_ALever_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_condition;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ActionnerMontage;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DesactionnerMontage;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WaterMecanic;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_value;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -83,6 +89,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_condition = { "condition", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, condition), Z_Construct_UClass_ALeverCondition_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_condition_MetaData), NewProp_condition_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_ActionnerMontage = { "ActionnerMontage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, ActionnerMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActionnerMontage_MetaData), NewProp_ActionnerMontage_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_DesactionnerMontage = { "DesactionnerMontage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, DesactionnerMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DesactionnerMontage_MetaData), NewProp_DesactionnerMontage_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_WaterMecanic = { "WaterMecanic", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, WaterMecanic), Z_Construct_UClass_AWaterMecanic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterMecanic_MetaData), NewProp_WaterMecanic_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ALever_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALever, value), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALever_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_Root,
@@ -90,6 +97,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALever_St
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_condition,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_ActionnerMontage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_DesactionnerMontage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_WaterMecanic,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALever_Statics::NewProp_value,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALever_Statics::PropPointers) < 2048);
@@ -136,10 +144,10 @@ ALever::~ALever() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 302452677U) },
+		{ Z_Construct_UClass_ALever, ALever::StaticClass, TEXT("ALever"), &Z_Registration_Info_UClass_ALever, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALever), 4168181212U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_844044300(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_2688851402(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_Lever_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

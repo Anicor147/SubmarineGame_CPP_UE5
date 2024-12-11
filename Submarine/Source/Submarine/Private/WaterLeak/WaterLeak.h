@@ -5,11 +5,14 @@
 #include "CoreMinimal.h"
 #include "InteractE.h"
 #include "NiagaraComponent.h"
+ // #include "WaterMecanic.h"
 #include "GameFramework/Actor.h"
 #include "Submarine/SubmarineCharacter.h"
 #include "WaterLeak.generated.h"
 
+class AWaterMecanic;
 UCLASS()
+
 class AWaterLeak : public AActor, public IInteractE
 {
 	GENERATED_BODY()
@@ -35,9 +38,12 @@ public:
 	}
 
 private:
+	UPROPERTY(EditAnywhere)
+	AWaterMecanic* WaterMecanic;
+	
 	ASubmarineCharacter* Player;
 	bool IsPatched;
-
+	bool DoOnce = false;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

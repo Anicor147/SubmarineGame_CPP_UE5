@@ -6,7 +6,7 @@
 #include "InteractE.h"
 #include "GameFramework/Actor.h"
 #include "Generator.generated.h"
-
+class AWaterMecanic;
 UCLASS()
 class AGenerator : public AActor , public  IInteractE
 {
@@ -30,6 +30,9 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
 
+
+	UPROPERTY(EditAnywhere)
+	AWaterMecanic* Water;
 
 	
 protected:

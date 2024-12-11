@@ -28,11 +28,22 @@ void AWaterMecanic::BeginPlay()
 void AWaterMecanic::WaterLevel(float DeltaTime)
 {
 	FVector CurrentLocation = GetActorLocation();
-	// CurrentLocation.Z = waterSpeed * GetWorld()->GetTimeSeconds();
 	CurrentLocation.Z += waterSpeed * DeltaTime;
-	if (CurrentLocation.Z > 155.f)
+	if (CurrentLocation.Z > 240.f)
 	{
-		CurrentLocation.Z = 155.f;
+		PlayerIsDrown = true;
+		CurrentLocation.Z = 240.f;
+	}
+	SetActorLocation(CurrentLocation);
+}
+
+void AWaterMecanic::DrainWater(float DeltaTime)
+{
+	FVector CurrentLocation = GetActorLocation();
+	CurrentLocation.Z -= waterSpeed * DeltaTime;
+	if (CurrentLocation.Z < 0.f)
+	{
+		CurrentLocation.Z = 0.f;
 	}
 	SetActorLocation(CurrentLocation);
 }
@@ -41,5 +52,30 @@ void AWaterMecanic::WaterLevel(float DeltaTime)
 void AWaterMecanic::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	WaterLevel(DeltaTime);
+
+	// UE_LOG(LogTemp, Warning, TEXT("PatchLeak : %d"), PatchedLeak);
+
+	if (PatchedLeak >= WaterLeaks.Num())
+	{
+		WaterLeaksPatched = true;
+		
+		// UE_LOG(LogTemp, Warning, TEXT("Water should not rise "));
+	}
+	else
+	{
+		WaterLevel(DeltaTime);
+		// UE_LOG(LogTemp, Warning, TEXT("Water is rising "));
+	}
+
+	if (RepairedGenerator <= Generators.Num())
+	{
+		GeneratorPatched = true;
+	}
+	
+	if (GeneratorPatched && WaterLeaksPatched)
+	{
+		DrainWater(DeltaTime);
+		
+		 UE_LOG(LogTemp, Warning, TEXT("Should be draining "));
+	}
 }

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "InteractE.h"
+#include "WaterMecanic.h"
 #include "GameFramework/Actor.h"
 #include "Lever.generated.h"
 
@@ -37,7 +38,6 @@ public:
 	UAnimMontage* DesactionnerMontage;
 protected:
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -49,9 +49,11 @@ public:
 	virtual void Interact() override;
 	
 private:
+
+	UPROPERTY(EditAnywhere)
+	AWaterMecanic* WaterMecanic;
 	void InitAnimations();
 	void InteractMontage();
-private:
 	UPROPERTY(EditAnywhere)
 	int value;
 	bool doOnce;
