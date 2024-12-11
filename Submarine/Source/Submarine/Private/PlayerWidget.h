@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "PlayerWidget.generated.h"
 
+class UTextBlock;
 /**
  * 
  */
@@ -15,12 +16,23 @@ class UPlayerWidget : public UUserWidget
 	GENERATED_BODY()
 
 public :
-	UFUNCTION(BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable)
 	void SetPromptF(bool Visible);
-	
-	UFUNCTION(BlueprintImplementableEvent)
+
+	UFUNCTION(BlueprintCallable)
 	void SetPromptE(bool Visible);
 
-	UFUNCTION(BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable)
 	void SetPromptG(bool Visible);
+
+protected :
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* PromptG;
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* PromptE;
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* PromptF;
+
+private:
+	virtual void NativeConstruct() override;
 };

@@ -14,11 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_PauseWidget_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSensivitySliderValue); \
+	DECLARE_FUNCTION(execSoundSliderValue); \
+	DECLARE_FUNCTION(execOnQuitButton); \
 	DECLARE_FUNCTION(execOnResumeButton);
 
 
-#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPauseWidget(); \
 	friend struct Z_Construct_UClass_UPauseWidget_Statics; \
@@ -27,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UPauseWidget)
 
 
-#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPauseWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -41,13 +44,13 @@ public: \
 	NO_API virtual ~UPauseWidget();
 
 
-#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_12_PROLOG
-#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_PROLOG
+#define FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_PauseWidget_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_PauseWidget_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

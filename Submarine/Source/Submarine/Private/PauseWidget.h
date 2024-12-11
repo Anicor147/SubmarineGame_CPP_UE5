@@ -4,8 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Submarine/SubmarinePlayerController.h"
 #include "PauseWidget.generated.h"
-
+class ASubmarineCharacter;
+class UButton;
+class USlider;
 /**
  * 
  */
@@ -19,11 +22,32 @@ protected:
 
 	UFUNCTION()
 	void OnResumeButton();
+	UFUNCTION()
+	void OnQuitButton();
 
+	UFUNCTION()
+	void SoundSliderValue(float Value);
+
+	UFUNCTION()
+	void SensivitySliderValue(float Value);
 public:
 	virtual void PauseGame();
 
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* ResumeButton;
+	UButton* ResumeButton;
+	
+	UPROPERTY(meta = (BindWidget))
+	UButton* QuitButton;
+
+	UPROPERTY(meta = (BindWidget))
+	USlider* SoundSlider;
+
+	UPROPERTY(meta = (BindWidget))
+	USlider* SensivitySlider;
+	
+private:
+	ASubmarinePlayerController* PlayerController;
+	
+	ASubmarineCharacter* Player;
 };

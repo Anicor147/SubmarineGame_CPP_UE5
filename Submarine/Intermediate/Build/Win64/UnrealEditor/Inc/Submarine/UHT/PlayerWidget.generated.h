@@ -14,8 +14,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_PlayerWidget_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_CALLBACK_WRAPPERS
-#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetPromptG); \
+	DECLARE_FUNCTION(execSetPromptE); \
+	DECLARE_FUNCTION(execSetPromptF);
+
+
+#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerWidget(); \
 	friend struct Z_Construct_UClass_UPlayerWidget_Statics; \
@@ -24,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerWidget)
 
 
-#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -38,13 +43,13 @@ public: \
 	NO_API virtual ~UPlayerWidget();
 
 
-#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_12_PROLOG
-#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_13_PROLOG
+#define FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_CALLBACK_WRAPPERS \
-	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_PlayerWidget_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

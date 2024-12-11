@@ -3,6 +3,8 @@
 
 #include "Weapon/Hammer.h"
 
+#include "PlayerWidget.h"
+
 // Sets default values
 AHammer::AHammer()
 {
@@ -52,12 +54,15 @@ void AHammer::Interact()
 
 					this->SetActorLocation(WeaponOrigin->GetComponentLocation());
 
-					FTransform AttachTransform = FTransform(WeaponOrigin->GetComponentRotation(), WeaponOrigin->GetComponentLocation(), Hammer->GetComponentScale());
+					FTransform AttachTransform = FTransform(WeaponOrigin->GetComponentRotation(),
+					                                        WeaponOrigin->GetComponentLocation(),
+					                                        Hammer->GetComponentScale());
 					// Hammer->SetRelativeRotation(Rotation);
-					Hammer -> SetWorldTransform(AttachTransform);
+					Hammer->SetWorldTransform(AttachTransform);
 					Hammer->SetWorldLocation(WeaponOrigin->GetComponentLocation());
 					SubmarineCharacter->SetAsHammer(true);
 					SubmarineCharacter->HeldItem = this;
+					SubmarineCharacter->PlayerWidget->SetPromptG(true);
 				}
 			}
 		}
@@ -83,6 +88,8 @@ void AHammer::DropItems()
 			SubmarineCharacter->HeldItem = nullptr;
 			UE_LOG(LogTemp, Warning, TEXT("HeldItem has been cleared. The character is no longer holding any item."));
 			SubmarineCharacter->SetAsHammer(false);
+
+			SubmarineCharacter->PlayerWidget->SetPromptG(false);
 		}
 	}
 }

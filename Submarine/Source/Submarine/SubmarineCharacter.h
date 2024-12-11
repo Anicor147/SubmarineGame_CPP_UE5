@@ -122,15 +122,16 @@ public:
 	void SetAsBattery(const bool Value) { AsBattery = Value; }
 	void SetAsToolBox(const bool Value) { AsToolbox = Value; }
 	bool GetAsToolBox() const { return AsToolbox; }
-
+	void SetSensitivityValue(const float Value) {SensitivityValue = Value;}
 	ABattery* GetBattery() { return Battery; }
 	void SetBattery(ABattery* Value) { Battery = Value; }
-
+	
 
 	IDropItems* HeldItem;
 
-private:
 	class UPlayerWidget* PlayerWidget;
+
+private:
 	class UPauseWidget* PauseWidget;
 
 
@@ -141,11 +142,12 @@ private:
 	TSubclassOf<UUserWidget> PauseWidgetClass;
 
 	UPROPERTY(EditAnywhere)
-	float maxDistance = 500.f;
+	float maxDistance = 600.f;
 	bool IsInspecting;
 	bool AsHammer;
 	bool AsBattery;
 	bool AsToolbox;
+	float SensitivityValue;
 	AActor* CurrentInspectActor;
 	AActor* InteractActor;
 

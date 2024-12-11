@@ -12,25 +12,18 @@ void EmptyLinkFunctionForGeneratedCodePlayerWidget() {}
 // Begin Cross Module References
 SUBMARINE_API UClass* Z_Construct_UClass_UPlayerWidget();
 SUBMARINE_API UClass* Z_Construct_UClass_UPlayerWidget_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_Submarine();
 // End Cross Module References
 
 // Begin Class UPlayerWidget Function SetPromptE
-struct PlayerWidget_eventSetPromptE_Parms
-{
-	bool Visible;
-};
-static const FName NAME_UPlayerWidget_SetPromptE = FName(TEXT("SetPromptE"));
-void UPlayerWidget::SetPromptE(bool Visible)
-{
-	PlayerWidget_eventSetPromptE_Parms Parms;
-	Parms.Visible=Visible ? true : false;
-	UFunction* Func = FindFunctionChecked(NAME_UPlayerWidget_SetPromptE);
-	ProcessEvent(Func,&Parms);
-}
 struct Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics
 {
+	struct PlayerWidget_eventSetPromptE_Parms
+	{
+		bool Visible;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
@@ -50,8 +43,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::NewProp_Visible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptE", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PropPointers), sizeof(PlayerWidget_eventSetPromptE_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::Function_MetaDataParams) };
-static_assert(sizeof(PlayerWidget_eventSetPromptE_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptE", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PlayerWidget_eventSetPromptE_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptE_Statics::PlayerWidget_eventSetPromptE_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptE()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -61,23 +54,23 @@ UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptE()
 	}
 	return ReturnFunction;
 }
+DEFINE_FUNCTION(UPlayerWidget::execSetPromptE)
+{
+	P_GET_UBOOL(Z_Param_Visible);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPromptE(Z_Param_Visible);
+	P_NATIVE_END;
+}
 // End Class UPlayerWidget Function SetPromptE
 
 // Begin Class UPlayerWidget Function SetPromptF
-struct PlayerWidget_eventSetPromptF_Parms
-{
-	bool Visible;
-};
-static const FName NAME_UPlayerWidget_SetPromptF = FName(TEXT("SetPromptF"));
-void UPlayerWidget::SetPromptF(bool Visible)
-{
-	PlayerWidget_eventSetPromptF_Parms Parms;
-	Parms.Visible=Visible ? true : false;
-	UFunction* Func = FindFunctionChecked(NAME_UPlayerWidget_SetPromptF);
-	ProcessEvent(Func,&Parms);
-}
 struct Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics
 {
+	struct PlayerWidget_eventSetPromptF_Parms
+	{
+		bool Visible;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
@@ -97,8 +90,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::NewProp_Visible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptF", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PropPointers), sizeof(PlayerWidget_eventSetPromptF_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::Function_MetaDataParams) };
-static_assert(sizeof(PlayerWidget_eventSetPromptF_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptF", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PlayerWidget_eventSetPromptF_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptF_Statics::PlayerWidget_eventSetPromptF_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptF()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -108,23 +101,23 @@ UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptF()
 	}
 	return ReturnFunction;
 }
+DEFINE_FUNCTION(UPlayerWidget::execSetPromptF)
+{
+	P_GET_UBOOL(Z_Param_Visible);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPromptF(Z_Param_Visible);
+	P_NATIVE_END;
+}
 // End Class UPlayerWidget Function SetPromptF
 
 // Begin Class UPlayerWidget Function SetPromptG
-struct PlayerWidget_eventSetPromptG_Parms
-{
-	bool Visible;
-};
-static const FName NAME_UPlayerWidget_SetPromptG = FName(TEXT("SetPromptG"));
-void UPlayerWidget::SetPromptG(bool Visible)
-{
-	PlayerWidget_eventSetPromptG_Parms Parms;
-	Parms.Visible=Visible ? true : false;
-	UFunction* Func = FindFunctionChecked(NAME_UPlayerWidget_SetPromptG);
-	ProcessEvent(Func,&Parms);
-}
 struct Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics
 {
+	struct PlayerWidget_eventSetPromptG_Parms
+	{
+		bool Visible;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
@@ -144,8 +137,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::NewProp_Visible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptG", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PropPointers), sizeof(PlayerWidget_eventSetPromptG_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::Function_MetaDataParams) };
-static_assert(sizeof(PlayerWidget_eventSetPromptG_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerWidget, nullptr, "SetPromptG", nullptr, nullptr, Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PlayerWidget_eventSetPromptG_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayerWidget_SetPromptG_Statics::PlayerWidget_eventSetPromptG_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptG()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -155,11 +148,26 @@ UFunction* Z_Construct_UFunction_UPlayerWidget_SetPromptG()
 	}
 	return ReturnFunction;
 }
+DEFINE_FUNCTION(UPlayerWidget::execSetPromptG)
+{
+	P_GET_UBOOL(Z_Param_Visible);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPromptG(Z_Param_Visible);
+	P_NATIVE_END;
+}
 // End Class UPlayerWidget Function SetPromptG
 
 // Begin Class UPlayerWidget
 void UPlayerWidget::StaticRegisterNativesUPlayerWidget()
 {
+	UClass* Class = UPlayerWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetPromptE", &UPlayerWidget::execSetPromptE },
+		{ "SetPromptF", &UPlayerWidget::execSetPromptF },
+		{ "SetPromptG", &UPlayerWidget::execSetPromptG },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPlayerWidget);
 UClass* Z_Construct_UClass_UPlayerWidget_NoRegister()
@@ -176,12 +184,31 @@ struct Z_Construct_UClass_UPlayerWidget_Statics
 		{ "IncludePath", "PlayerWidget.h" },
 		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PromptG_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PromptE_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PromptF_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Private/PlayerWidget.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PromptG;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PromptE;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PromptF;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptE, "SetPromptE" }, // 253017709
-		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptF, "SetPromptF" }, // 1703291012
-		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptG, "SetPromptG" }, // 3141062451
+		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptE, "SetPromptE" }, // 1714162903
+		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptF, "SetPromptF" }, // 1936300079
+		{ &Z_Construct_UFunction_UPlayerWidget_SetPromptG, "SetPromptG" }, // 3540019106
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -189,6 +216,15 @@ struct Z_Construct_UClass_UPlayerWidget_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptG = { "PromptG", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerWidget, PromptG), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptG_MetaData), NewProp_PromptG_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptE = { "PromptE", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerWidget, PromptE), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptE_MetaData), NewProp_PromptE_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptF = { "PromptF", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerWidget, PromptF), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptF_MetaData), NewProp_PromptF_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerWidget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptG,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptE,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerWidget_Statics::NewProp_PromptF,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerWidget_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UUserWidget,
 	(UObject* (*)())Z_Construct_UPackage__Script_Submarine,
@@ -200,11 +236,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPlayerWidget_Statics::
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_UPlayerWidget_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerWidget_Statics::PropPointers),
 	0,
 	0x00A010A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerWidget_Statics::Class_MetaDataParams), Z_Construct_UClass_UPlayerWidget_Statics::Class_MetaDataParams)
@@ -230,10 +266,10 @@ UPlayerWidget::~UPlayerWidget() {}
 struct Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PlayerWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerWidget, UPlayerWidget::StaticClass, TEXT("UPlayerWidget"), &Z_Registration_Info_UClass_UPlayerWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerWidget), 4028663942U) },
+		{ Z_Construct_UClass_UPlayerWidget, UPlayerWidget::StaticClass, TEXT("UPlayerWidget"), &Z_Registration_Info_UClass_UPlayerWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerWidget), 3250056420U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PlayerWidget_h_2007267560(TEXT("/Script/Submarine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PlayerWidget_h_454099959(TEXT("/Script/Submarine"),
 	Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PlayerWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Submarine_Source_Submarine_Private_PlayerWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
