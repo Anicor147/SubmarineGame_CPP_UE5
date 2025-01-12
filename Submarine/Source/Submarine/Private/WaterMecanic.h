@@ -10,6 +10,8 @@
 #include "WaterLeak/WaterLeak.h"
 #include "WaterMecanic.generated.h"
 
+class ASubmarinePlayerController;
+
 UCLASS()
 class AWaterMecanic : public AActor
 {
@@ -28,6 +30,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UNiagaraComponent* WaterComponent;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> DeadWidgetClass;
+
+	
+	class UDeadScreenWidget* DeadScreenWidget;
 	bool GetWaterLeaksFixed() const { return WaterLeaksPatched; }
 	bool GetGeneratorIsFix()const { return GeneratorPatched; }
 private:
@@ -47,6 +54,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	float waterSpeed;
 
+	ASubmarinePlayerController* PlayerController;
 	void DecreasePatchedLeak() { PatchedLeak++; }
 	void GeneratorsFixed() { RepairedGenerator++; }
 protected:

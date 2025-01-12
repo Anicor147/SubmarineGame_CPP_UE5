@@ -29,6 +29,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	UNiagaraComponent* WaterLeak;
 
+	UPROPERTY(EditAnywhere)
+	USoundBase* WaterLeakSound;
+	
 	bool GetIsPatched() { return IsPatched; }
 
 	bool SetIsPatched(const bool Value)

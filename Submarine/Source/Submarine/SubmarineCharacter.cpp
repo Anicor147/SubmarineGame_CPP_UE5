@@ -11,6 +11,7 @@
 #include "MainMenuWidget.h"
 #include "PauseWidget.h"
 #include "PlayerWidget.h"
+#include "StoryWidget.h"
 #include "Blueprint/UserWidget.h"
 #include "Engine/LocalPlayer.h"
 #include "Kismet/GameplayStatics.h"
@@ -81,9 +82,9 @@ void ASubmarineCharacter::BeginPlay()
 		}
 	}
 	FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
-	if (MainMenuWidgetClass && CurrentLevelName=="MainMenu" )
+	if (MainMenuWidgetClass && CurrentLevelName == "MainMenu")
 	{
-		auto UserMainMenuWidget = CreateWidget<UUserWidget>(GetWorld(), MainMenuWidgetClass); 
+		auto UserMainMenuWidget = CreateWidget<UUserWidget>(GetWorld(), MainMenuWidgetClass);
 		if (UserMainMenuWidget)
 		{
 			MainMenuWidget = Cast<UMainMenuWidget>(UserMainMenuWidget);
@@ -94,6 +95,23 @@ void ASubmarineCharacter::BeginPlay()
 			}
 		}
 	}
+
+	if (StoryWidgetClass && CurrentLevelName == "FirstPersonMap")
+	{
+		auto UserStoryWidget = CreateWidget<UUserWidget>(GetWorld(), StoryWidgetClass);
+		if (UserStoryWidget)
+		{
+			StoryWidget = Cast<UStoryWidget>(UserStoryWidget);
+			if (StoryWidget)
+			{
+				StoryWidget->AddToViewport();
+				StoryWidget->SetVisibility(ESlateVisibility::Visible);
+			}
+		}
+	}
+
+	
+	UGameplayStatics::PlaySound2D(GetWorld(), Music, 0.1f, 1, 0,NULL);
 }
 
 void ASubmarineCharacter::Tick(float DeltaTime)

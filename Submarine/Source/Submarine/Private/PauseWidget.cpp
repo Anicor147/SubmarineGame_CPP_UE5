@@ -7,6 +7,7 @@
 #include "Components/Slider.h"
 #include "GameFramework/PlayerInput.h"
 #include "Kismet/GameplayStatics.h"
+#include "Sound/SoundClass.h"
 #include "Submarine/SubmarineCharacter.h"
 
 void UPauseWidget::NativeConstruct()
@@ -17,7 +18,7 @@ void UPauseWidget::NativeConstruct()
 	{
 		ResumeButton->OnClicked.AddDynamic(this, &UPauseWidget::OnResumeButton);
 	}
-    
+
 	if (QuitButton)
 	{
 		QuitButton->OnClicked.AddDynamic(this, &UPauseWidget::OnQuitButton);
@@ -25,17 +26,17 @@ void UPauseWidget::NativeConstruct()
 
 	if (SensivitySlider)
 	{
-	 SensivitySlider->OnValueChanged.AddDynamic(this,&UPauseWidget::SensivitySliderValue);	
+		SensivitySlider->OnValueChanged.AddDynamic(this, &UPauseWidget::SensivitySliderValue);
 	}
 
 	if (SoundSlider)
 	{
-		SoundSlider -> OnValueChanged.AddDynamic(this, &UPauseWidget::SoundSliderValue);
+		SoundSlider->OnValueChanged.AddDynamic(this, &UPauseWidget::SoundSliderValue);
 	}
-	PlayerController =Cast<ASubmarinePlayerController>(UGameplayStatics::GetPlayerController(GetWorld(),0));
+	PlayerController = Cast<ASubmarinePlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 	Player = Cast<ASubmarineCharacter>(PlayerController->GetPawn());
 
-	Player ->SetSensitivityValue(SensivitySlider->GetValue());
+	Player->SetSensitivityValue(SensivitySlider->GetValue());
 }
 
 void UPauseWidget::OnResumeButton()
@@ -50,11 +51,12 @@ void UPauseWidget::OnQuitButton()
 
 void UPauseWidget::SoundSliderValue(float Value)
 {
-	
-}
+	SoundClass->Properties.Volume = Value;
+}	
 
 void UPauseWidget::SensivitySliderValue(float Value)
 {
+
 	Player->SetSensitivityValue(Value);
 }
 

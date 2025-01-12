@@ -71,6 +71,8 @@ class ASubmarineCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* DropAction;
 
+	UPROPERTY(EditAnywhere)
+	USoundBase* Music;
 public:
 	ASubmarineCharacter();
 
@@ -125,14 +127,16 @@ public:
 	void SetSensitivityValue(const float Value) {SensitivityValue = Value;}
 	ABattery* GetBattery() { return Battery; }
 	void SetBattery(ABattery* Value) { Battery = Value; }
-	
-
+	void SetSoundValue(const float Value) {SoundValue  = Value;}
+	float GetSoundValue (){return SoundValue;}
 	IDropItems* HeldItem;
 
 	class UPlayerWidget* PlayerWidget;
 
 	class UMainMenuWidget* MainMenuWidget;
 
+	class UStoryWidget* StoryWidget;
+	
 private:
 	class UPauseWidget* PauseWidget;
 
@@ -145,7 +149,8 @@ private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UUserWidget> MainMenuWidgetClass;
 
-
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> StoryWidgetClass;
 	
 	UPROPERTY(EditAnywhere)
 	float maxDistance = 600.f;
@@ -154,6 +159,7 @@ private:
 	bool AsBattery;
 	bool AsToolbox;
 	float SensitivityValue;
+	float SoundValue = 0.1f;
 	AActor* CurrentInspectActor;
 	AActor* InteractActor;
 

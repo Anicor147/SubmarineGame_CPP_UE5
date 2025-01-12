@@ -10,10 +10,7 @@
 void UMainMenuWidget::PlayGame()
 {
 	
-	UGameplayStatics::OpenLevel(this, FName("Gameplay"));
-	// auto Player = PlayerController->GetPawn();
-	// auto SubmarineCharacter = Cast<ASubmarineCharacter>(Player);
-	// SubmarineCharacter -> MainMenuWidget->SetVisibility(ESlateVisibility::Hidden);
+	UGameplayStatics::OpenLevel(this, FName("FirstPersonMap"));
 }
 
 void UMainMenuWidget::QuitGame()

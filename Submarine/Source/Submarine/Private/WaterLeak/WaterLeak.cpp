@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "WaterLeak/WaterLeak.h"
-
 #include "WaterMecanic.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -18,9 +17,11 @@ AWaterLeak::AWaterLeak()
 	Patch = CreateDefaultSubobject<USkeletalMeshComponent>("Patch");
 	Patch->SetupAttachment(Root);
 
-
 	WaterLeak = CreateDefaultSubobject<UNiagaraComponent>("WaterLeak");
 	WaterLeak->SetupAttachment(Root);
+
+
+	WaterLeakSound = CreateDefaultSubobject<USoundBase>(TEXT("WaterLeakSound"));
 }
 
 // Called when the game starts or when spawned
@@ -34,6 +35,8 @@ void AWaterLeak::BeginPlay()
 		Player = Cast<ASubmarineCharacter>(PlayerController->GetPawn());
 	}
 	Patch->SetHiddenInGame(true);
+
+	UGameplayStatics::PlaySound2D(GetWorld(), WaterLeakSound, 0.1f, 1, 0,NULL);
 }
 
 // Called every frame
@@ -46,7 +49,7 @@ void AWaterLeak::Interact()
 {
 	if (Player)
 	{
-		if (Player->GetAsHammer() && Player ->GetAsToolBox() )
+		if (Player->GetAsHammer() && Player->GetAsToolBox())
 		{
 			Patch->SetHiddenInGame(false);
 			WaterLeak->Deactivate();

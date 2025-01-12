@@ -3,6 +3,12 @@
 
 #include "WaterMecanic.h"
 
+#include "DeadScreenWidget.h"
+#include "PlayerWidget.h"
+#include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
+#include "Submarine/SubmarinePlayerController.h"
+
 // Sets default values
 AWaterMecanic::AWaterMecanic()
 {
@@ -23,16 +29,36 @@ AWaterMecanic::AWaterMecanic()
 void AWaterMecanic::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PlayerController = Cast<ASubmarinePlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+	if (DeadWidgetClass)
+	{
+		auto UserDeadWidget = CreateWidget<UUserWidget>(GetWorld(), DeadWidgetClass);
+		if (UserDeadWidget)
+		{
+			DeadScreenWidget = Cast<UDeadScreenWidget>(UserDeadWidget);
+		}
+		if (DeadScreenWidget)
+		{
+			DeadScreenWidget->AddToViewport();
+			DeadScreenWidget->SetVisibility(ESlateVisibility::Hidden);
+		}
+	}
 }
 
 void AWaterMecanic::WaterLevel(float DeltaTime)
 {
 	FVector CurrentLocation = GetActorLocation();
 	CurrentLocation.Z += waterSpeed * DeltaTime;
-	if (CurrentLocation.Z > 240.f)
+	if (CurrentLocation.Z > 345.f)
 	{
 		PlayerIsDrown = true;
-		CurrentLocation.Z = 240.f;
+		CurrentLocation.Z = 345.f;
+		DeadScreenWidget->SetVisibility(ESlateVisibility::Visible);
+		UGameplayStatics::SetGamePaused(GetWorld(), true);
+		PlayerController->SetShowMouseCursor(true);
+		auto player = Cast<ASubmarineCharacter>(PlayerController->GetPawn());
+		player->PlayerWidget->SetVisibility(ESlateVisibility::Hidden);
 	}
 	SetActorLocation(CurrentLocation);
 }
@@ -58,7 +84,7 @@ void AWaterMecanic::Tick(float DeltaTime)
 	if (PatchedLeak >= WaterLeaks.Num())
 	{
 		WaterLeaksPatched = true;
-		
+
 		// UE_LOG(LogTemp, Warning, TEXT("Water should not rise "));
 	}
 	else
@@ -71,11 +97,11 @@ void AWaterMecanic::Tick(float DeltaTime)
 	{
 		GeneratorPatched = true;
 	}
-	
+
 	if (GeneratorPatched && WaterLeaksPatched)
 	{
 		DrainWater(DeltaTime);
-		
-		 UE_LOG(LogTemp, Warning, TEXT("Should be draining "));
+
+		UE_LOG(LogTemp, Warning, TEXT("Should be draining "));
 	}
 }

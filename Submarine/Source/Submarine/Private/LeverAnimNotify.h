@@ -9,6 +9,7 @@
 /**
  * 
  */
+
 DECLARE_MULTICAST_DELEGATE(FOnNotifiedSignature);
 UCLASS()
 class ULeverAnimNotify : public UAnimNotify

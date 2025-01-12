@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Submarine/SubmarinePlayerController.h"
+#include "WaterLeak/WaterLeak.h"
 #include "PauseWidget.generated.h"
 class ASubmarineCharacter;
 class UButton;
@@ -45,9 +46,12 @@ public:
 
 	UPROPERTY(meta = (BindWidget))
 	USlider* SensivitySlider;
+
+	UPROPERTY(EditAnywhere)
+	USoundClass* SoundClass;
 	
 private:
 	ASubmarinePlayerController* PlayerController;
-	
+	AWaterLeak* WaterLeak;	
 	ASubmarineCharacter* Player;
 };
