@@ -1,0 +1,40 @@
+Single-Project Creative Use License
+
+Copyright Sébastien Francoeur, [2024]
+
+Permissions
+You are granted the following rights:
+
+Single Project Use Only:
+
+You may use the 3D assets provided under this license for one specific project only.
+
+Adaptation:
+
+You may modify, transform, or adapt the assets, provided the resulting work complies with the restrictions outlined below.
+
+Restrictions
+
+Non-Commercial Use:
+
+The assets, or any derivative works, may not be used for commercial purposes.
+
+Content Standards:
+
+Any adaptations or derivative works must not:
+Contain discriminatory content, including but not limited to material that promotes hatred based on race, gender, religion, or other characteristics.
+Include explicit profanities, vulgar language, or offensive imagery.
+Be used in marketing, advertising, or promotional material.
+
+Attribution
+You must give appropriate credit to the original creator (e.g., “Sébastien Francoeur”), and indicate if changes were made.
+
+Disclaimer
+This work is provided "as is," without warranty of any kind, express or implied. The creator is not liable for any claims, damages, or other liabilities arising from the use of these assets.
+
+Authorized Project: Submarine game
+
+
+
+
+
