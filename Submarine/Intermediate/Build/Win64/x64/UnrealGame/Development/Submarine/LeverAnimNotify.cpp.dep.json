@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\leveranimnotify.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\submarine\\development\\engine\\sharedpch.engine.project.valapi.cpp20.inclorderunreal5_4.h.pch",
+        "Includes": [
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\x64\\unrealgame\\development\\submarine\\definitions.submarine.h",
+            "e:\\unreal\\submarineue\\submarine\\source\\submarine\\private\\leveranimnotify.h",
+            "e:\\unreal\\submarineue\\submarine\\intermediate\\build\\win64\\unrealgame\\inc\\submarine\\uht\\leveranimnotify.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -82,6 +82,18 @@
     <Filter Include="Source\Submarine\Private">
       <UniqueIdentifier>{4748C48E-C6F2-3F49-8867-2C90B86A6857}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Submarine\Private\AwakeAudioPlayer.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\AwakeAudioPlayer.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\DeadScreenWidget.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\DeadScreenWidget.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\Detach.cpp">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
@@ -92,6 +104,12 @@
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\DropItems.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\FStoryData.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\FStoryData.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\InteractE.cpp">
@@ -164,6 +182,12 @@
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\PlayerWidget.h">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\StoryWidget.cpp">
+      <Filter>Source\Submarine\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Submarine\Private\StoryWidget.h">
       <Filter>Source\Submarine\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Submarine\Private\WaterMecanic.cpp">

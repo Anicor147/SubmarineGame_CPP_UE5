@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SUBMARINE_WaterMecanic_generated_h
 
-#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWaterMecanic(); \
 	friend struct Z_Construct_UClass_AWaterMecanic_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AWaterMecanic)
 
 
-#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AWaterMecanic(AWaterMecanic&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AWaterMecanic();
 
 
-#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_13_PROLOG
-#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_16_GENERATED_BODY \
+#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_15_PROLOG
+#define FID_Submarine_Source_Submarine_Private_WaterMecanic_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Submarine_Source_Submarine_Private_WaterMecanic_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Submarine_Source_Submarine_Private_WaterMecanic_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Submarine_Source_Submarine_Private_WaterMecanic_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Submarine_Source_Submarine_Private_WaterMecanic_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
